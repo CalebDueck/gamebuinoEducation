@@ -1,0 +1,12 @@
+name: example_student
+width: 8
+height: 8
+
+..XXXX..
+.X....X.
+X.X..X.X
+X......X
+X.XXXX.X
+X......X
+.X....X.
+..XXXX..

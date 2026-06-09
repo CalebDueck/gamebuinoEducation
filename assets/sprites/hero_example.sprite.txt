@@ -1,0 +1,12 @@
+name: hero_example
+width: 8
+height: 8
+
+..XXXX..
+.XXXXXX.
+XX.XX.XX
+XXXXXXXX
+..XXXX..
+.XX..XX.
+XX....XX
+........
