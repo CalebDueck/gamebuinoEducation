@@ -3,8 +3,6 @@
 
 Gamebuino gb;
 
-
-
 void setup() {
   gb.begin();
   gb.titleScreen(F("Grid"));
@@ -12,11 +10,13 @@ void setup() {
 
 void loop() {
   if (gb.update()) {
-    // CORE QUEST: draw a border around the whole 84x48 screen.
-        gb.display.drawRect(0, 0, LCDWIDTH, LCDHEIGHT);
-        // CORE QUEST: place shapes using x/y coordinates.
-        gb.display.fillRect(4, 4, 6, 6);
-        gb.display.drawCircle(70, 12, 5);
-        // TODO: add two more shapes in different corners.
+    // CORE QUEST 1: draw a border around the whole 84x48 screen.
+    gb.display.drawRect(0, 0, LCDWIDTH, LCDHEIGHT);
+
+    // CORE QUEST 2: place shapes using x/y coordinates.
+    gb.display.fillRect(4, 4, 6, 6);
+    gb.display.drawCircle(70, 12, 5);
+
+    // CORE QUEST 3: add two more shapes in different corners.
   }
 }

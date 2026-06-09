@@ -1,48 +1,67 @@
 # Mission 06 - Monochrome Sprites
 
-        ## Mission Brief
-        Create and display a custom bitmap sprite. This mission adds one practical piece to the Falling Stars questline.
+## Mission Brief
+Create a custom ASCII-art sprite, validate it, convert it, and display it as a Gamebuino Classic bitmap.
 
-        ## Learning Targets
-        - Build and test one small Gamebuino Classic feature.
-        - Explain the new code in your own words.
-        - Use the checkpoint list to prove the mission works.
+You are not trying to type a finished game all at once. You are collecting one piece of new gear, testing it, and then using it in the Falling Stars questline.
 
-        ## New Gear
-        - `ASCII art`
-- `bitmap`
+## Learning Targets
+- Read an ASCII sprite grid.
+- Validate sprite dimensions.
+- Convert a sprite to a bitmap header.
+- Display a bitmap with `drawBitmap`.
+
+## New Gear
+- `.sprite.txt`
+- `width and height`
 - `PROGMEM`
 - `drawBitmap`
 
-        ## Starter File
-        Open `projects/06_sprite_lab/starter/sprite_lab_starter.ino`.
+## Starter File
+Open `projects/06_sprite_lab/starter/sprite_lab_starter.ino`.
 
-        ## Quest Log
-        1. Read the TODOs in the starter file before changing code.
-        2. Predict what the first TODO should do on screen.
-        3. Add or change one small code block.
-        4. Compile before adding the next feature.
-        5. Test on the Gamebuino Classic and record one thing you customized.
+## Quest Log
+1. Read the TODO labels in the starter before changing code.
+2. Predict the visible result of the next TODO.
+3. Add one small snippet or one small edit.
+4. Compile and upload before moving on.
+5. Check the screen and buttons, then write what changed.
 
-        ## Core Quest
-        Complete the TODOs marked `CORE QUEST`.
+Useful snippet card:
 
-        ## Challenge Quest
-        Add one small twist that changes what the player sees, controls, or scores.
+```bash
+python tools/sprite_validator.py assets/sprites/hero_example.sprite.txt
+```
+```bash
+python tools/sprite_to_bitmap.py assets/sprites/hero_example.sprite.txt --out assets/generated/example_sprites.h
+```
 
-        ## Checkpoint
-        - Your sprite file validates.
-- A header is generated.
-- The sprite displays on the Gamebuino.
+Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
-        ## Debug Dungeon
-        Start with `debug-dungeon.md` when the screen is blank, upload fails, or a value changes too fast.
+## Core Quest
+1. Open `assets/sprites/hero_example.sprite.txt`.
+2. Change three pixels, then validate it.
+3. Convert the sprite to a header.
+4. Open the sprite lab starter.
+5. Draw the generated bitmap.
+6. Submit a separate class gallery sprite file.
 
-        ## Power-Ups
-        Choose from `power-ups.md` after the checkpoint works.
+## Challenge Quest
+Create a second 8x8 item sprite for Falling Stars.
 
-        ## Boss Fight
-        Combine this mission with one older mission. Keep the change small enough to finish and test today.
+## Checkpoint
+- Your sprite validates.
+- The terminal preview matches your art.
+- The sprite appears on the Gamebuino screen.
 
-        ## Reflection
-        What did you change, and how did the Gamebuino prove your code was running?
+## Debug Dungeon
+Start with `debug-dungeon.md`. Then try the matching puzzle in `debug-puzzles.md` before asking for a solution.
+
+## Power-Ups
+Choose from `power-ups.md` after the checkpoint works. Power-Ups should change one rule, one visual, or one piece of feedback.
+
+## Boss Fight
+Combine this mission with one older mission. Keep the change small enough to test today.
+
+## Reflection
+How is a sprite like a tiny grid of yes/no choices?

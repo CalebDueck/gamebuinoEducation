@@ -1,48 +1,66 @@
 # Mission 03 - Buttons and Decisions
 
-        ## Mission Brief
-        Use button input and if statements. This mission adds one practical piece to the Falling Stars questline.
+## Mission Brief
+Use button input and if statements so the player can make the program react.
 
-        ## Learning Targets
-        - Build and test one small Gamebuino Classic feature.
-        - Explain the new code in your own words.
-        - Use the checkpoint list to prove the mission works.
+You are not trying to type a finished game all at once. You are collecting one piece of new gear, testing it, and then using it in the Falling Stars questline.
 
-        ## New Gear
-        - `if`
-- `BTN_A through BTN_C`
-- `pressed vs repeat`
-- `booleans`
+## Learning Targets
+- Write an `if` statement.
+- Use Gamebuino button constants.
+- Choose `pressed()` for events and `repeat()` for held movement.
 
-        ## Starter File
-        Open `projects/03_button_tester/starter/button_tester_starter.ino`.
+## New Gear
+- `if`
+- `BTN_A`
+- `BTN_B`
+- `BTN_C`
+- `pressed()`
+- `repeat()`
 
-        ## Quest Log
-        1. Read the TODOs in the starter file before changing code.
-        2. Predict what the first TODO should do on screen.
-        3. Add or change one small code block.
-        4. Compile before adding the next feature.
-        5. Test on the Gamebuino Classic and record one thing you customized.
+## Starter File
+Open `projects/03_button_tester/starter/button_tester_starter.ino`.
 
-        ## Core Quest
-        Complete the TODOs marked `CORE QUEST`.
+## Quest Log
+1. Read the TODO labels in the starter before changing code.
+2. Predict the visible result of the next TODO.
+3. Add one small snippet or one small edit.
+4. Compile and upload before moving on.
+5. Check the screen and buttons, then write what changed.
 
-        ## Challenge Quest
-        Add one small twist that changes what the player sees, controls, or scores.
+Useful snippet card:
 
-        ## Checkpoint
-        - A button name appears when pressed.
-- D-pad directions display correctly.
-- C clears or changes the display.
+```cpp
+if (gb.buttons.pressed(BTN_A)) {
+  gb.popup(F("A!"), 15);
+}
+```
 
-        ## Debug Dungeon
-        Start with `debug-dungeon.md` when the screen is blank, upload fails, or a value changes too fast.
+Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
-        ## Power-Ups
-        Choose from `power-ups.md` after the checkpoint works.
+## Core Quest
+1. Test A and B first.
+2. Add C.
+3. Add one D-pad direction.
+4. Add the remaining D-pad directions.
+5. Explain which buttons use `pressed()` and why.
 
-        ## Boss Fight
-        Combine this mission with one older mission. Keep the change small enough to finish and test today.
+## Challenge Quest
+Make a secret code: UP, UP, A displays a short message.
 
-        ## Reflection
-        What did you change, and how did the Gamebuino prove your code was running?
+## Checkpoint
+- A and B show different feedback.
+- All D-pad directions can be detected.
+- C clears or changes the message.
+
+## Debug Dungeon
+Start with `debug-dungeon.md`. Then try the matching puzzle in `debug-puzzles.md` before asking for a solution.
+
+## Power-Ups
+Choose from `power-ups.md` after the checkpoint works. Power-Ups should change one rule, one visual, or one piece of feedback.
+
+## Boss Fight
+Combine this mission with one older mission. Keep the change small enough to test today.
+
+## Reflection
+When should a game use `pressed()` instead of `repeat()`?

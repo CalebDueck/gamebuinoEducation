@@ -1,48 +1,66 @@
 # Mission 02 - The Screen Is a Grid
 
-        ## Mission Brief
-        Use x/y coordinates on the 84x48 display. This mission adds one practical piece to the Falling Stars questline.
+## Mission Brief
+Use coordinates to place pixels, rectangles, and circles exactly where you want them.
 
-        ## Learning Targets
-        - Build and test one small Gamebuino Classic feature.
-        - Explain the new code in your own words.
-        - Use the checkpoint list to prove the mission works.
+You are not trying to type a finished game all at once. You are collecting one piece of new gear, testing it, and then using it in the Falling Stars questline.
 
-        ## New Gear
-        - `x and y`
-- `origin`
-- `pixels`
-- `LCDWIDTH and LCDHEIGHT`
+## Learning Targets
+- Describe the screen origin.
+- Use x/y coordinates to place shapes.
+- Use `LCDWIDTH` and `LCDHEIGHT` for screen edges.
 
-        ## Starter File
-        Open `projects/02_screen_grid/starter/screen_grid_starter.ino`.
+## New Gear
+- `x coordinate`
+- `y coordinate`
+- `drawRect`
+- `fillRect`
+- `drawCircle`
 
-        ## Quest Log
-        1. Read the TODOs in the starter file before changing code.
-        2. Predict what the first TODO should do on screen.
-        3. Add or change one small code block.
-        4. Compile before adding the next feature.
-        5. Test on the Gamebuino Classic and record one thing you customized.
+## Starter File
+Open `projects/02_screen_grid/starter/screen_grid_starter.ino`.
 
-        ## Core Quest
-        Complete the TODOs marked `CORE QUEST`.
+## Quest Log
+1. Read the TODO labels in the starter before changing code.
+2. Predict the visible result of the next TODO.
+3. Add one small snippet or one small edit.
+4. Compile and upload before moving on.
+5. Check the screen and buttons, then write what changed.
 
-        ## Challenge Quest
-        Add one small twist that changes what the player sees, controls, or scores.
+Useful snippet card:
 
-        ## Checkpoint
-        - A border fits the screen.
-- A shape appears in each corner.
-- Your mini picture uses at least three drawing commands.
+```cpp
+gb.display.fillRect(4, 4, 6, 6);
+```
+```cpp
+gb.display.drawRect(0, 0, LCDWIDTH, LCDHEIGHT);
+```
 
-        ## Debug Dungeon
-        Start with `debug-dungeon.md` when the screen is blank, upload fails, or a value changes too fast.
+Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
-        ## Power-Ups
-        Choose from `power-ups.md` after the checkpoint works.
+## Core Quest
+1. Draw a border around the display.
+2. Place one filled rectangle near the upper-left corner.
+3. Place one circle near the upper-right corner.
+4. Add two more shapes using coordinates you choose.
+5. Change one coordinate and predict the movement before upload.
 
-        ## Boss Fight
-        Combine this mission with one older mission. Keep the change small enough to finish and test today.
+## Challenge Quest
+Draw a mini map with a room, door, and treasure spot.
 
-        ## Reflection
-        What did you change, and how did the Gamebuino prove your code was running?
+## Checkpoint
+- A border fits the screen.
+- At least four shapes appear.
+- You can point to x and y for one shape.
+
+## Debug Dungeon
+Start with `debug-dungeon.md`. Then try the matching puzzle in `debug-puzzles.md` before asking for a solution.
+
+## Power-Ups
+Choose from `power-ups.md` after the checkpoint works. Power-Ups should change one rule, one visual, or one piece of feedback.
+
+## Boss Fight
+Combine this mission with one older mission. Keep the change small enough to test today.
+
+## Reflection
+What happens to y when a shape moves down?

@@ -1,16 +1,21 @@
 # Hints - Buttons and Decisions
 
-## Hint 1
-Look for the TODO closest to the top of the starter file. Global variables usually live above `setup()`.
+## Hint 1 - Find the Job
+Read the TODO out loud. Is it asking you to change input, movement, drawing, score, lives, or reset behavior?
 
-## Hint 2
-If the display is blank, make sure your drawing code is inside:
+## Hint 2 - Use the Smallest Snippet
+A useful clue for this mission is:
 
 ```cpp
-if (gb.update()) {
-  // draw here
+if (gb.buttons.pressed(BTN_A)) {
+  gb.popup(F("A!"), 15);
 }
 ```
 
-## Hint 3
-Make one change at a time. A tiny working quest beats a giant mystery bug.
+Do not paste until you can say what each name means.
+
+## Hint 3 - Change One Number
+If the code works but you do not understand it yet, change one number, upload, and observe the result.
+
+## Hint 4 - Ask a Better Question
+Instead of "it does not work," try "I expected ___, but the Gamebuino shows ___."

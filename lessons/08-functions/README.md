@@ -1,48 +1,65 @@
 # Mission 08 - Functions: Clean Up Your Spellbook
 
-        ## Mission Brief
-        Use functions to organize repeated code. This mission adds one practical piece to the Falling Stars questline.
+## Mission Brief
+Move related code into named functions so the game is easier to read and debug.
 
-        ## Learning Targets
-        - Build and test one small Gamebuino Classic feature.
-        - Explain the new code in your own words.
-        - Use the checkpoint list to prove the mission works.
+You are not trying to type a finished game all at once. You are collecting one piece of new gear, testing it, and then using it in the Falling Stars questline.
 
-        ## New Gear
-        - `void functions`
-- `parameters`
+## Learning Targets
+- Call a function from `loop()`.
+- Separate update code from drawing code.
+- Name functions by the job they do.
+
+## New Gear
+- `void`
 - `updatePlayer()`
+- `drawPlayer()`
 - `drawHud()`
 
-        ## Starter File
-        Open `projects/08_functions_refactor/starter/functions_refactor_starter.ino`.
+## Starter File
+Open `projects/08_functions_refactor/starter/functions_refactor_starter.ino`.
 
-        ## Quest Log
-        1. Read the TODOs in the starter file before changing code.
-        2. Predict what the first TODO should do on screen.
-        3. Add or change one small code block.
-        4. Compile before adding the next feature.
-        5. Test on the Gamebuino Classic and record one thing you customized.
+## Quest Log
+1. Read the TODO labels in the starter before changing code.
+2. Predict the visible result of the next TODO.
+3. Add one small snippet or one small edit.
+4. Compile and upload before moving on.
+5. Check the screen and buttons, then write what changed.
 
-        ## Core Quest
-        Complete the TODOs marked `CORE QUEST`.
+Useful snippet card:
 
-        ## Challenge Quest
-        Add one small twist that changes what the player sees, controls, or scores.
+```cpp
+void drawHud() {
+  gb.display.print(F("Score: "));
+  gb.display.println(score);
+}
+```
 
-        ## Checkpoint
-        - Movement code lives in updatePlayer().
-- Drawing code lives in drawPlayer().
+Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
+
+## Core Quest
+1. Find each function call in `loop()`.
+2. Complete `updatePlayer()`.
+3. Check that `drawPlayer()` still draws.
+4. Add one line to `drawHud()`.
+5. Explain which function you would inspect for a movement bug.
+
+## Challenge Quest
+Add `resetPlayer()` and call it when C is pressed.
+
+## Checkpoint
+- Movement code lives in `updatePlayer()`.
+- Drawing code lives in `drawPlayer()`.
 - HUD code is separated.
 
-        ## Debug Dungeon
-        Start with `debug-dungeon.md` when the screen is blank, upload fails, or a value changes too fast.
+## Debug Dungeon
+Start with `debug-dungeon.md`. Then try the matching puzzle in `debug-puzzles.md` before asking for a solution.
 
-        ## Power-Ups
-        Choose from `power-ups.md` after the checkpoint works.
+## Power-Ups
+Choose from `power-ups.md` after the checkpoint works. Power-Ups should change one rule, one visual, or one piece of feedback.
 
-        ## Boss Fight
-        Combine this mission with one older mission. Keep the change small enough to finish and test today.
+## Boss Fight
+Combine this mission with one older mission. Keep the change small enough to test today.
 
-        ## Reflection
-        What did you change, and how did the Gamebuino prove your code was running?
+## Reflection
+Why is a named function easier to debug than one huge loop?

@@ -1,48 +1,66 @@
 # Mission 04 - Variables Remember Game State
 
-        ## Mission Brief
-        Use variables for changing game values. This mission adds one practical piece to the Falling Stars questline.
+## Mission Brief
+Use variables for values that change while a game is running.
 
-        ## Learning Targets
-        - Build and test one small Gamebuino Classic feature.
-        - Explain the new code in your own words.
-        - Use the checkpoint list to prove the mission works.
+You are not trying to type a finished game all at once. You are collecting one piece of new gear, testing it, and then using it in the Falling Stars questline.
 
-        ## New Gear
-        - `int`
+## Learning Targets
+- Create and change an `int` variable.
+- Use a `byte` for small whole-number values.
+- Display score and lives.
+
+## New Gear
+- `int`
 - `byte`
 - `assignment`
-- `score and lives`
+- `score`
+- `lives`
 
-        ## Starter File
-        Open `projects/04_score_counter/starter/score_counter_starter.ino`.
+## Starter File
+Open `projects/04_score_counter/starter/score_counter_starter.ino`.
 
-        ## Quest Log
-        1. Read the TODOs in the starter file before changing code.
-        2. Predict what the first TODO should do on screen.
-        3. Add or change one small code block.
-        4. Compile before adding the next feature.
-        5. Test on the Gamebuino Classic and record one thing you customized.
+## Quest Log
+1. Read the TODO labels in the starter before changing code.
+2. Predict the visible result of the next TODO.
+3. Add one small snippet or one small edit.
+4. Compile and upload before moving on.
+5. Check the screen and buttons, then write what changed.
 
-        ## Core Quest
-        Complete the TODOs marked `CORE QUEST`.
+Useful snippet card:
 
-        ## Challenge Quest
-        Add one small twist that changes what the player sees, controls, or scores.
+```cpp
+int score = 0;
+```
+```cpp
+score = score + 1;
+```
 
-        ## Checkpoint
-        - Score starts at 0.
-- A increases score.
-- B or C changes another variable.
+Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
-        ## Debug Dungeon
-        Start with `debug-dungeon.md` when the screen is blank, upload fails, or a value changes too fast.
+## Core Quest
+1. Find the starting values for `score` and `lives`.
+2. Make A increase score.
+3. Make B subtract from score or lives.
+4. Make C reset one variable.
+5. Print both values on screen.
 
-        ## Power-Ups
-        Choose from `power-ups.md` after the checkpoint works.
+## Challenge Quest
+Add a target score that displays Win when score reaches 10.
 
-        ## Boss Fight
-        Combine this mission with one older mission. Keep the change small enough to finish and test today.
+## Checkpoint
+- Score starts at 0.
+- A changes score by exactly 1.
+- A second button changes or resets another value.
 
-        ## Reflection
-        What did you change, and how did the Gamebuino prove your code was running?
+## Debug Dungeon
+Start with `debug-dungeon.md`. Then try the matching puzzle in `debug-puzzles.md` before asking for a solution.
+
+## Power-Ups
+Choose from `power-ups.md` after the checkpoint works. Power-Ups should change one rule, one visual, or one piece of feedback.
+
+## Boss Fight
+Combine this mission with one older mission. Keep the change small enough to test today.
+
+## Reflection
+What value does your game need to remember between frames?

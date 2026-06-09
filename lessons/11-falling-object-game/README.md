@@ -1,49 +1,73 @@
 # Mission 11 - Falling Object Game
 
-        ## Mission Brief
-        Combine movement, sprites, collision, score, lives, and randomness. This mission adds one practical piece to the Falling Stars questline.
+## Mission Brief
+Combine movement, collision, randomness, score, lives, and game states into Falling Stars.
 
-        ## Learning Targets
-        - Build and test one small Gamebuino Classic feature.
-        - Explain the new code in your own words.
-        - Use the checkpoint list to prove the mission works.
+You are not trying to type a finished game all at once. You are collecting one piece of new gear, testing it, and then using it in the Falling Stars questline.
 
-        ## New Gear
-        - `game loop`
-- `state`
-- `falling objects`
-- `lives`
+## Learning Targets
+- Update one game state at a time.
+- Make a falling object reset.
+- Use collision for scoring.
+- Use lives and game over.
 
-        ## Starter File
-        Open `projects/11_falling_stars/starter/falling_stars_starter.ino`.
+## New Gear
+- `STATE_TITLE`
+- `STATE_PLAYING`
+- `STATE_GAME_OVER`
+- `resetStar()`
+- `updateStar()`
 
-        ## Quest Log
-        1. Read the TODOs in the starter file before changing code.
-        2. Predict what the first TODO should do on screen.
-        3. Add or change one small code block.
-        4. Compile before adding the next feature.
-        5. Test on the Gamebuino Classic and record one thing you customized.
+## Starter File
+Open `projects/11_falling_stars/starter/falling_stars_starter.ino`.
 
-        ## Core Quest
-        Complete the TODOs marked `CORE QUEST`.
+## Quest Log
+1. Read the TODO labels in the starter before changing code.
+2. Predict the visible result of the next TODO.
+3. Add one small snippet or one small edit.
+4. Compile and upload before moving on.
+5. Check the screen and buttons, then write what changed.
 
-        ## Challenge Quest
-        Add one small twist that changes what the player sees, controls, or scores.
+Useful snippet card:
 
-        ## Checkpoint
-        - Player moves left and right.
+```cpp
+starY = starY + starSpeed;
+```
+```cpp
+if (lives == 0) {
+  gameState = STATE_GAME_OVER;
+}
+```
+
+Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
+
+## Core Quest
+1. Start at the title state and press A to play.
+2. Complete player left/right movement.
+3. Make the star fall.
+4. Reset the star when it reaches the bottom.
+5. Subtract a life on a miss.
+6. Add catch collision and score.
+7. Switch to game over at 0 lives.
+
+## Challenge Quest
+Increase star speed every 5 points.
+
+## Checkpoint
+- Player moves left and right.
 - Star falls from the top.
-- Score and lives change.
+- Score changes when caught.
+- Lives change when missed.
 - Game over appears at 0 lives.
 
-        ## Debug Dungeon
-        Start with `debug-dungeon.md` when the screen is blank, upload fails, or a value changes too fast.
+## Debug Dungeon
+Start with `debug-dungeon.md`. Then try the matching puzzle in `debug-puzzles.md` before asking for a solution.
 
-        ## Power-Ups
-        Choose from `power-ups.md` after the checkpoint works.
+## Power-Ups
+Choose from `power-ups.md` after the checkpoint works. Power-Ups should change one rule, one visual, or one piece of feedback.
 
-        ## Boss Fight
-        Combine this mission with one older mission. Keep the change small enough to finish and test today.
+## Boss Fight
+Combine this mission with one older mission. Keep the change small enough to test today.
 
-        ## Reflection
-        What did you change, and how did the Gamebuino prove your code was running?
+## Reflection
+Which function owns the rule for catching or missing a star?

@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 from pathlib import Path
-import sys
 
-REQUIRED = ["README.md", "quest-log.md", "hints.md", "debug-dungeon.md", "teacher-notes.md"]
+REQUIRED = ["README.md", "quest-log.md", "hints.md", "debug-dungeon.md", "debug-puzzles.md", "teacher-notes.md"]
 LESSONS = Path("lessons")
 
 def main():
@@ -23,10 +22,13 @@ def main():
             if text.count("```cpp") > 2 or "#include <Gamebuino.h>" in text:
                 print(f"{readme} may contain too much complete code")
                 failed = True
-            for heading in ["Mission Brief", "Learning Targets", "New Gear", "Starter File", "Quest Log", "Checkpoint", "Debug Dungeon", "Power-Ups", "Boss Fight", "Reflection"]:
+            for heading in ["Mission Brief", "Learning Targets", "New Gear", "Starter File", "Quest Log", "Core Quest", "Challenge Quest", "Checkpoint", "Debug Dungeon", "Power-Ups", "Boss Fight", "Reflection"]:
                 if heading not in text:
                     print(f"{readme} missing heading: {heading}")
                     failed = True
+            if "Do not paste a finished sketch" not in text:
+                print(f"{readme} missing anti-copy guidance")
+                failed = True
     raise SystemExit(1 if failed else 0)
 
 if __name__ == "__main__":

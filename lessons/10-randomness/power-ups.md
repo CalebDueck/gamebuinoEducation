@@ -1,9 +1,11 @@
 # Power-Ups - Randomness
 
-- Change the wording, shape, sprite, or speed so the project feels like yours.
-- Add a second visible thing on screen.
-- Add a sound or popup when the player succeeds.
-- Pair with a teammate and trade one bug-fix idea.
+Choose one after the checkpoint works.
+
+- Cosmetic: change text, shape, sprite, layout, or theme.
+- Feel: change speed, timing, feedback, or button behavior.
+- Rule: add one score, life, timer, win, or loss twist.
+- Debug: create a broken version, trade with a partner, and fix each other's bug.
 
 ## Boss Fight
-Add a feature from an earlier mission without breaking today's checkpoint.
+Add a rare bonus item or random point value.
