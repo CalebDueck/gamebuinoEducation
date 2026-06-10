@@ -1,3 +1,3 @@
 # Gallery Index
 
-- example_student (8x8)
+- example_programmer (8x8)

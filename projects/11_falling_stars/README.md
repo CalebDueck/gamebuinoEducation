@@ -2,12 +2,12 @@
 
 Mission 11 has two files:
 
-- `starter/falling_stars_starter.ino`: the student build path with staged TODOs.
+- `starter/falling_stars_starter.ino`: the gameBuilder path with staged TODOs.
 - `reference/falling_stars_reference.ino`: a complete reference game.
 
 ## Reference Lock
 
-Do not open the reference sketch until your teacher unlocks it, or until you have passed these checkpoints:
+Do not open the reference sketch until you have passed these checkpoints:
 
 1. Player moves left and right.
 2. Star falls and resets after a miss.

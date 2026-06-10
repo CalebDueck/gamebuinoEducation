@@ -14,7 +14,7 @@ You are not trying to type a finished game all at once. You are collecting one p
 ## New Gear
 - `prototype`
 - `scope`
-- `rubric`
+- `requirements`
 - `iteration`
 
 ## Starter File

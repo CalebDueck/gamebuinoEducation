@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from pathlib import Path
 
-REQUIRED = ["README.md", "quest-log.md", "hints.md", "debug-dungeon.md", "debug-puzzles.md", "teacher-notes.md"]
+REQUIRED = ["README.md", "quest-log.md", "hints.md", "debug-dungeon.md", "debug-puzzles.md"]
 LESSONS = Path("lessons")
 
 def main():
@@ -11,7 +11,7 @@ def main():
         if lesson.name != "13-final-project":
             required.append("power-ups.md")
         else:
-            required.extend(["project-menu.md", "rubric.md"])
+            required.append("project-menu.md")
         for filename in required:
             if not (lesson / filename).exists():
                 print(f"Missing {lesson / filename}")
