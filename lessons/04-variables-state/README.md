@@ -18,7 +18,7 @@ You are not trying to type a finished game all at once. You are collecting one p
 - `lives`
 
 ## Starter File
-Open `projects/04_score_counter/starter/score_counter_starter.ino`.
+Open `score_counter_starter.ino`.
 
 ## Quest Log
 1. Read the TODO labels in the starter before changing code.
@@ -35,6 +35,13 @@ int score = 0;
 ```cpp
 score = score + 1;
 ```
+
+How variables and `=` work:
+
+- A variable is a named place that stores a value.
+- `int score = 0;` creates a variable named `score` and starts it at `0`.
+- `=` means assignment, or "store this value here."
+- `score = score + 1;` means take the old score, add `1`, and store the new score back into `score`.
 
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
@@ -53,11 +60,25 @@ Add a target score that displays Win when score reaches 10.
 - A changes score by exactly 1.
 - A second button changes or resets another value.
 
-## Debug Dungeon
-Start with `debug-dungeon.md`. Then try the matching puzzle in `debug-puzzles.md` before asking for a solution.
+## Bug Hunt
+If you get stuck, check the line above the first error message first. Missing semicolons, missing braces, wrong capitalization, and code outside the right function cause a lot of beginner bugs.
+
+Try this tiny repair challenge before changing more of your own sketch:
+
+```cpp
+// Finish the broken line and explain what was missing.
+if (gb.buttons.pressed(BTN_A)) {
+  score = score + 1
+}
+```
 
 ## Power-Ups
-Choose from `power-ups.md` after the checkpoint works. Power-Ups should change one rule, one visual, or one piece of feedback.
+After the checkpoint works, try one small upgrade inside this same sketch:
+
+- Cosmetic: change text, shape, sprite, layout, or theme.
+- Feel: change speed, timing, feedback, or button behavior.
+- Rule: add one score, life, timer, win, or loss twist.
+- Debug: make one tiny bug on purpose, then fix it and explain the fix.
 
 ## Boss Fight
 Combine this mission with one older mission. Keep the change small enough to test today.

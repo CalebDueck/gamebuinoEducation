@@ -18,7 +18,7 @@ You are not trying to type a finished game all at once. You are collecting one p
 - `drawBitmap`
 
 ## Starter File
-Open `projects/06_sprite_lab/starter/sprite_lab_starter.ino`.
+Open `sprite_lab_starter.ino`.
 
 ## Quest Log
 1. Read the TODO labels in the starter before changing code.
@@ -44,7 +44,7 @@ Do not paste a finished sketch from another file. If you use a snippet card, exp
 3. Convert the sprite to a header.
 4. Open the sprite lab starter.
 5. Draw the generated bitmap.
-6. Submit a separate class gallery sprite file.
+6. Save a separate sprite gallery file if you want to include it in the gallery later.
 
 ## Challenge Quest
 Create a second 8x8 item sprite for Falling Stars.
@@ -54,11 +54,25 @@ Create a second 8x8 item sprite for Falling Stars.
 - The terminal preview matches your art.
 - The sprite appears on the Gamebuino screen.
 
-## Debug Dungeon
-Start with `debug-dungeon.md`. Then try the matching puzzle in `debug-puzzles.md` before asking for a solution.
+## Bug Hunt
+If you get stuck, check the line above the first error message first. Missing semicolons, missing braces, wrong capitalization, and code outside the right function cause a lot of beginner bugs.
+
+Try this tiny repair challenge before changing more of your own sketch:
+
+```cpp
+// Finish the broken line and explain what was missing.
+if (gb.buttons.pressed(BTN_A)) {
+  score = score + 1
+}
+```
 
 ## Power-Ups
-Choose from `power-ups.md` after the checkpoint works. Power-Ups should change one rule, one visual, or one piece of feedback.
+After the checkpoint works, try one small upgrade inside this same sketch:
+
+- Cosmetic: change text, shape, sprite, layout, or theme.
+- Feel: change speed, timing, feedback, or button behavior.
+- Rule: add one score, life, timer, win, or loss twist.
+- Debug: make one tiny bug on purpose, then fix it and explain the fix.
 
 ## Boss Fight
 Combine this mission with one older mission. Keep the change small enough to test today.

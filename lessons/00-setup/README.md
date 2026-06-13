@@ -1,9 +1,11 @@
 # Mission 00 - Setup: Enter the Dev Kit
 
 ## Mission Brief
-Get one known-good Gamebuino Classic sketch running so the class can trust the hardware before learning new code.
+Get one known-good Gamebuino Classic sketch running so you can trust the hardware before learning new code.
 
 You are not trying to type a finished game all at once. You are collecting one piece of new gear, testing it, and then using it in the Falling Stars questline.
+
+If this is your first programming language, keep `ARDUINO_FUNDAMENTALS.md` open while you work.
 
 ## Learning Targets
 - Open a sketch in the Arduino IDE.
@@ -18,7 +20,7 @@ You are not trying to type a finished game all at once. You are collecting one p
 - `upload`
 
 ## Starter File
-Open `projects/00_welcome_badge/welcome_badge.ino`.
+Open `welcome_badge.ino`.
 
 ## Quest Log
 1. Read the TODO labels in the starter before changing code.
@@ -34,6 +36,13 @@ Useful snippet card:
 gb.display.println(F("Ready!"));
 ```
 
+How `setup()` and `loop()` work:
+
+- `setup()` runs once when the Gamebuino starts.
+- `loop()` runs again and again while the Gamebuino is on.
+- Many game actions happen inside `loop()` because input, drawing, and movement need to keep updating.
+- A `sketch` is just an Arduino program file.
+
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
 ## Core Quest
@@ -44,18 +53,32 @@ Do not paste a finished sketch from another file. If you use a snippet card, exp
 5. Upload again and press A.
 
 ## Challenge Quest
-Change the badge so it welcomes your team, table, or game studio.
+Change the badge so it welcomes you, your project name, or your game studio.
 
 ## Checkpoint
 - The title screen appears after upload.
 - The changed message appears.
 - Pressing A triggers the popup.
 
-## Debug Dungeon
-Start with `debug-dungeon.md`. Then try the matching puzzle in `debug-puzzles.md` before asking for a solution.
+## Bug Hunt
+If you get stuck, check the line above the first error message first. Missing semicolons, missing braces, wrong capitalization, and code outside the right function cause a lot of beginner bugs.
+
+Try this tiny repair challenge before changing more of your own sketch:
+
+```cpp
+// Finish the broken line and explain what was missing.
+if (gb.buttons.pressed(BTN_A)) {
+  score = score + 1
+}
+```
 
 ## Power-Ups
-Choose from `power-ups.md` after the checkpoint works. Power-Ups should change one rule, one visual, or one piece of feedback.
+After the checkpoint works, try one small upgrade inside this same sketch:
+
+- Cosmetic: change text, shape, sprite, layout, or theme.
+- Feel: change speed, timing, feedback, or button behavior.
+- Rule: add one score, life, timer, win, or loss twist.
+- Debug: make one tiny bug on purpose, then fix it and explain the fix.
 
 ## Boss Fight
 Combine this mission with one older mission. Keep the change small enough to test today.

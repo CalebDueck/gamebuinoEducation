@@ -18,7 +18,7 @@ You are not trying to type a finished game all at once. You are collecting one p
 - `LCDHEIGHT`
 
 ## Starter File
-Open `projects/05_moving_square/starter/moving_square_starter.ino`.
+Open `moving_square_starter.ino`.
 
 ## Quest Log
 1. Read the TODO labels in the starter before changing code.
@@ -40,6 +40,15 @@ if (playerY + playerH > LCDHEIGHT) {
 }
 ```
 
+How comparisons work:
+
+- Comparison operators ask a yes/no question.
+- `>` means greater than.
+- `<` means less than.
+- `>=` means greater than or equal to.
+- `<=` means less than or equal to.
+- In this example, the code checks whether the square has moved past the bottom edge.
+
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
 ## Core Quest
@@ -58,11 +67,25 @@ Hold B to move faster without changing normal speed.
 - All four D-pad directions move it.
 - The square cannot leave the screen.
 
-## Debug Dungeon
-Start with `debug-dungeon.md`. Then try the matching puzzle in `debug-puzzles.md` before asking for a solution.
+## Bug Hunt
+If you get stuck, check the line above the first error message first. Missing semicolons, missing braces, wrong capitalization, and code outside the right function cause a lot of beginner bugs.
+
+Try this tiny repair challenge before changing more of your own sketch:
+
+```cpp
+// Finish the broken line and explain what was missing.
+if (gb.buttons.pressed(BTN_A)) {
+  score = score + 1
+}
+```
 
 ## Power-Ups
-Choose from `power-ups.md` after the checkpoint works. Power-Ups should change one rule, one visual, or one piece of feedback.
+After the checkpoint works, try one small upgrade inside this same sketch:
+
+- Cosmetic: change text, shape, sprite, layout, or theme.
+- Feel: change speed, timing, feedback, or button behavior.
+- Rule: add one score, life, timer, win, or loss twist.
+- Debug: make one tiny bug on purpose, then fix it and explain the fix.
 
 ## Boss Fight
 Combine this mission with one older mission. Keep the change small enough to test today.

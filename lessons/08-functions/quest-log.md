@@ -3,7 +3,7 @@
 Use this page like a mission checklist. Stop after each stage and test.
 
 ## Stage 1 - Scout
-- Open `projects/08_functions_refactor/starter/functions_refactor_starter.ino`.
+- Open `functions_refactor_starter.ino`.
 - Find the TODO with the smallest number.
 - Predict what should appear, move, or change.
 
@@ -20,4 +20,4 @@ Use this page like a mission checklist. Stop after each stage and test.
 ## Stage 4 - Explain
 - Name the variable or function you changed.
 - Explain what the player sees because of that code.
-- Ask a partner one debugging question before asking for outside help.
+- Write one debugging question for yourself before asking for outside help.

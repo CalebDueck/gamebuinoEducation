@@ -16,7 +16,7 @@ You are not trying to type a finished game all at once. You are collecting one p
 - `score feedback`
 
 ## Starter File
-Open `projects/09_coin_collector/starter/coin_collector_starter.ino`.
+Open `coin_collector_starter.ino`.
 
 ## Quest Log
 1. Read the TODO labels in the starter before changing code.
@@ -50,11 +50,25 @@ Add a hazard that costs one life.
 - Touching the coin increases score.
 - The coin moves or resets after collection.
 
-## Debug Dungeon
-Start with `debug-dungeon.md`. Then try the matching puzzle in `debug-puzzles.md` before asking for a solution.
+## Bug Hunt
+If you get stuck, check the line above the first error message first. Missing semicolons, missing braces, wrong capitalization, and code outside the right function cause a lot of beginner bugs.
+
+Try this tiny repair challenge before changing more of your own sketch:
+
+```cpp
+// Finish the broken line and explain what was missing.
+if (gb.buttons.pressed(BTN_A)) {
+  score = score + 1
+}
+```
 
 ## Power-Ups
-Choose from `power-ups.md` after the checkpoint works. Power-Ups should change one rule, one visual, or one piece of feedback.
+After the checkpoint works, try one small upgrade inside this same sketch:
+
+- Cosmetic: change text, shape, sprite, layout, or theme.
+- Feel: change speed, timing, feedback, or button behavior.
+- Rule: add one score, life, timer, win, or loss twist.
+- Debug: make one tiny bug on purpose, then fix it and explain the fix.
 
 ## Boss Fight
 Combine this mission with one older mission. Keep the change small enough to test today.

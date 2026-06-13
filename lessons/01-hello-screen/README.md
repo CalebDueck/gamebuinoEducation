@@ -17,7 +17,7 @@ You are not trying to type a finished game all at once. You are collecting one p
 - `gb.frameCount`
 
 ## Starter File
-Open `projects/01_hello_screen/starter/hello_screen_starter.ino`.
+Open `hello_screen_starter.ino`.
 
 ## Quest Log
 1. Read the TODO labels in the starter before changing code.
@@ -37,12 +37,19 @@ if (gb.frameCount % 20 < 10) {
 }
 ```
 
+How `%` works:
+
+- `%` means modulo, or remainder after division.
+- `gb.frameCount % 20` gives a value from `0` to `19`, then starts over.
+- That means the condition is true for part of the cycle and false for part of the cycle, which makes blinking possible.
+- Example: `7 % 3` is `1` because `7` divided by `3` leaves remainder `1`.
+
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
 ## Core Quest
 1. Predict where each printed line will appear.
 2. Change the game title.
-3. Add your name or team name.
+3. Add your name or project name.
 4. Add a Press A prompt.
 5. Test whether your text fits on the tiny screen.
 
@@ -51,14 +58,28 @@ Make one line blink every half second using `gb.frameCount`.
 
 ## Checkpoint
 - Your game title appears.
-- Your name or team name appears.
+- Your name or project name appears.
 - The prompt fits without running off the screen.
 
-## Debug Dungeon
-Start with `debug-dungeon.md`. Then try the matching puzzle in `debug-puzzles.md` before asking for a solution.
+## Bug Hunt
+If you get stuck, check the line above the first error message first. Missing semicolons, missing braces, wrong capitalization, and code outside the right function cause a lot of beginner bugs.
+
+Try this tiny repair challenge before changing more of your own sketch:
+
+```cpp
+// Finish the broken line and explain what was missing.
+if (gb.buttons.pressed(BTN_A)) {
+  score = score + 1
+}
+```
 
 ## Power-Ups
-Choose from `power-ups.md` after the checkpoint works. Power-Ups should change one rule, one visual, or one piece of feedback.
+After the checkpoint works, try one small upgrade inside this same sketch:
+
+- Cosmetic: change text, shape, sprite, layout, or theme.
+- Feel: change speed, timing, feedback, or button behavior.
+- Rule: add one score, life, timer, win, or loss twist.
+- Debug: make one tiny bug on purpose, then fix it and explain the fix.
 
 ## Boss Fight
 Combine this mission with one older mission. Keep the change small enough to test today.
