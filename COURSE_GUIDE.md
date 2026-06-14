@@ -1,6 +1,8 @@
 # Course Guide
 
-This is the main course-facing reference for the repo. It explains the learning path, support philosophy, and build norms for anyone using the course independently or in a group.
+This is the main course-facing reference for the repo. It explains the learning path, support philosophy, and build norms for anyone using the course independently.
+
+If you have never programmed before, start by skimming `ARDUINO_FUNDAMENTALS.md`.
 
 ## Course Arc
 
@@ -31,7 +33,7 @@ Do not substitute Gamebuino META, Python, CircuitPython, or Python Academy mater
 2. GameBuilders read the first TODO and make a prediction.
 3. GameBuilders make one small edit.
 4. Compile and upload.
-5. GameBuilders show the checkpoint to a partner.
+5. GameBuilders verify the checkpoint on the device.
 6. GameBuilders write the reflection or take a Power-Up.
 
 ## What To Watch In Any Lesson
@@ -56,9 +58,9 @@ Useful questions:
 
 The public repo should not contain full solutions for every lesson. Learners need enough support to continue independently, but not a nearby answer key that turns the course into copy/paste.
 
-- Keep public files as starters, snippet cards, debug puzzles, and checkpoints.
+- Keep public files as starters, snippet cards, and checkpoints.
 - Keep complete solutions in a private branch, private repo, or local ZIP when needed.
-- Release a reference sketch only after the class has built the underlying mechanics.
+- Release a reference sketch only after the underlying mechanics have been built.
 - When helping, reveal the smallest next expression, condition, or variable name.
 
 GameBuilders may use:
@@ -66,20 +68,19 @@ GameBuilders may use:
 - lesson README snippet cards
 - hints
 - debug puzzles
-- partner explanations
 - official references during Code Archaeology
 
 GameBuilders should not paste:
 
 - whole finished sketches
-- another gameBuilder's finished project
+- someone else's finished project
 - the Falling Stars reference before the reference lock opens
 
 ## Anti-Copying Norm
 
 A gameBuilder can use a snippet only after they can name the variable or command it changes. A working screen matters, but the explanation is the checkpoint.
 
-## Partner Debugging
+## Self-Debugging
 
 Before asking for help, gameBuilders answer:
 
@@ -103,7 +104,7 @@ Use the Challenge Quest when a gameBuilder can explain the checkpoint without re
 
 ## Pacing
 
-Mission 00 may take a full class. Missions 01-05 can fit short focused lessons plus build time. Missions 06-11 need more workshop time. Mission 13 should span multiple sessions.
+Mission 00 may take one focused session. Missions 01-05 fit short build cycles. Missions 06-11 need more build and test time. Mission 13 is best as a multi-session project.
 
 ## Hardware Prep
 

@@ -24,13 +24,15 @@ This repo is for Gamebuino Classic only. Confirm that you are using the Classic 
 
 ## Setup Steps
 
-1. Install or open Arduino IDE.
-2. Install the Gamebuino Classic library.
-3. Open `projects/00_welcome_badge/welcome_badge.ino`.
-4. Select the verified board and port for your device.
-5. Compile.
-6. Upload.
-7. Run the sketch on the Gamebuino Classic.
+1. Download Arduino IDE from https://www.arduino.cc/en/software/
+2. Open Arduino IDE.
+3. Click the books icon and search for `Gamebuino`.
+4. Install the Gamebuino Classic library.
+5. Open `lessons/00-setup/welcome_badge.ino`.
+6. Select the verified board and port for your device.
+7. Compile.
+8. Upload.
+9. Run the sketch on the Gamebuino Classic.
 
 ## Verify On Your Device First
 

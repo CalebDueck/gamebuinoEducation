@@ -1,8 +1,8 @@
-# Git Mission 4 - Class Gallery
+# Git Mission 4 - Sprite Gallery
 
 This is a stretch quest. Read the reference links in `REFERENCES.md`, predict one behavior, make one small change, and test it.
 
-The class gallery uses one `.sprite.txt` file per gameBuilder inside `class_gallery/submissions/`.
+The sprite gallery uses one `.sprite.txt` file per gameBuilder inside `class_gallery/submissions/`.
 
 Before adding your gallery contribution:
 

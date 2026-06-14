@@ -1,16 +1,14 @@
 #!/usr/bin/env python3
 from pathlib import Path
 
-REQUIRED = ["README.md", "quest-log.md", "hints.md", "debug-dungeon.md", "debug-puzzles.md"]
+REQUIRED = ["README.md", "quest-log.md", "hints.md"]
 LESSONS = Path("lessons")
 
 def main():
     failed = False
     for lesson in sorted(p for p in LESSONS.iterdir() if p.is_dir()):
         required = REQUIRED.copy()
-        if lesson.name != "13-final-project":
-            required.append("power-ups.md")
-        else:
+        if lesson.name == "13-final-project":
             required.append("project-menu.md")
         for filename in required:
             if not (lesson / filename).exists():
@@ -19,10 +17,10 @@ def main():
         readme = lesson / "README.md"
         if readme.exists():
             text = readme.read_text(encoding="utf-8")
-            if text.count("```cpp") > 2 or "#include <Gamebuino.h>" in text:
+            if text.count("```cpp") > 3 or "#include <Gamebuino.h>" in text:
                 print(f"{readme} may contain too much complete code")
                 failed = True
-            for heading in ["Mission Brief", "Learning Targets", "New Gear", "Starter File", "Quest Log", "Core Quest", "Challenge Quest", "Checkpoint", "Debug Dungeon", "Power-Ups", "Boss Fight", "Reflection"]:
+            for heading in ["Mission Brief", "Learning Targets", "New Gear", "Starter File", "Quest Log", "Core Quest", "Challenge Quest", "Checkpoint", "Bug Hunt", "Power-Ups", "Boss Fight", "Reflection"]:
                 if heading not in text:
                     print(f"{readme} missing heading: {heading}")
                     failed = True

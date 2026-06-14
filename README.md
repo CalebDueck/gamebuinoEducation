@@ -2,7 +2,7 @@
 
 Learn programming fundamentals by building tiny games for the Gamebuino Classic.
 
-This course uses Arduino C++ and the 84x48 monochrome Gamebuino Classic screen. Each lesson is a mission: gameBuilders learn one new piece of programming gear, complete a quest, test a checkpoint, escape the Debug Dungeon, and unlock power-ups.
+This course uses Arduino C++ and the 84x48 monochrome Gamebuino Classic screen. Each lesson is a mission: gameBuilders learn one new piece of programming gear, complete a quest, test a checkpoint, debug real mistakes, and add their own upgrades.
 
 By the end, gameBuilders build and customize a complete mini-game with a sprite, score, lives, randomness, title screen, and game-over screen.
 
@@ -33,17 +33,21 @@ The course is designed to be independently navigable without becoming an answer 
 
 Follow this path:
 
-1. Read `SETUP_GAMEBUINO_CLASSIC.md` and get one device working.
-2. Start Lesson 00 in `lessons/00-setup/README.md`.
-3. Open `projects/00_welcome_badge/welcome_badge.ino` and complete the Lesson 00 mission.
-4. Read `COURSE_GUIDE.md` for the bigger picture and full course arc.
-5. After that, move through the numbered lesson folders in order: `01`, `02`, `03`, and so on.
+1. Download Arduino IDE: https://www.arduino.cc/en/software/
+2. Open Arduino IDE.
+3. Click the books icon in the IDE and search for `Gamebuino` to install the Gamebuino Classic library.
+4. If you have never programmed before, skim `ARDUINO_FUNDAMENTALS.md`.
+5. Read `SETUP_GAMEBUINO_CLASSIC.md` and get one device working.
+6. Start Lesson 00 in `lessons/00-setup/README.md`.
+7. Open `lessons/00-setup/welcome_badge.ino` and complete the Lesson 00 mission.
+8. Read `COURSE_GUIDE.md` for the bigger picture and full course arc.
+9. After that, move through the numbered lesson folders in order: `01`, `02`, `03`, and so on.
 
 Inside each lesson:
 
 - read the lesson `README.md`
-- update the matching project or starter file
-- use `quest-log.md`, `hints.md`, and the debug files only when needed
+- update the sketch or template in that lesson folder
+- use `quest-log.md` and `hints.md` only when needed
 - save stretch paths for later unless the core mission is already working
 
 Keep `PROGRAMMER_SUPPORT.md` open for troubleshooting habits and the hints-first LLM prompt.
@@ -58,7 +62,7 @@ Contact: `calebdueck@gmail.com`
 
 ## Stretch Paths
 
-- Git and class sprite gallery
+- Git and sprite gallery
 - code archaeology
 - advanced graphics
 - multiplayer with two Gamebuino Classics
