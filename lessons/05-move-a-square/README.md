@@ -48,6 +48,8 @@ How comparisons work:
 - `>=` means greater than or equal to.
 - `<=` means less than or equal to.
 - In this example, the code checks whether the square has moved past the bottom edge.
+- `playerX` controls left and right movement.
+- `playerY` controls up and down movement.
 
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
@@ -73,9 +75,8 @@ If you get stuck, check the line above the first error message first. Missing se
 Try this tiny repair challenge before changing more of your own sketch:
 
 ```cpp
-// Finish the broken line and explain what was missing.
-if (gb.buttons.pressed(BTN_A)) {
-  score = score + 1
+if (gb.buttons.repeat(BTN_UP, 1)) {
+  playerY = playerY - 1
 }
 ```
 
@@ -86,9 +87,6 @@ After the checkpoint works, try one small upgrade inside this same sketch:
 - Feel: change speed, timing, feedback, or button behavior.
 - Rule: add one score, life, timer, win, or loss twist.
 - Debug: make one tiny bug on purpose, then fix it and explain the fix.
-
-## Boss Fight
-Combine this mission with one older mission. Keep the change small enough to test today.
 
 ## Reflection
 Which variable changes when the square moves right?

@@ -36,6 +36,16 @@ python tools/sprite_validator.py assets/sprites/hero_example.sprite.txt
 python tools/sprite_to_bitmap.py assets/sprites/hero_example.sprite.txt --out assets/generated/example_sprites.h
 ```
 
+How sprite files and tools work:
+
+- A `.sprite.txt` file is a tiny picture made from text characters in a grid.
+- Each row needs the same number of columns, or the converter will not know the sprite width.
+- `python tools/sprite_validator.py ...` checks whether the text sprite has valid rows and dimensions.
+- `python tools/sprite_to_bitmap.py ...` turns that text sprite into C++ bitmap data the Gamebuino can draw.
+- Run those commands from the repo root folder.
+- `PROGMEM` means the bitmap is stored as fixed data instead of taking up scarce working memory.
+- `drawBitmap(x, y, SPRITE_NAME)` draws that fixed image at one screen position.
+
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
 ## Core Quest
@@ -59,11 +69,9 @@ If you get stuck, check the line above the first error message first. Missing se
 
 Try this tiny repair challenge before changing more of your own sketch:
 
-```cpp
-// Finish the broken line and explain what was missing.
-if (gb.buttons.pressed(BTN_A)) {
-  score = score + 1
-}
+```txt
+.##.....
+..#....
 ```
 
 ## Power-Ups
@@ -75,7 +83,7 @@ After the checkpoint works, try one small upgrade inside this same sketch:
 - Debug: make one tiny bug on purpose, then fix it and explain the fix.
 
 ## Boss Fight
-Combine this mission with one older mission. Keep the change small enough to test today.
+Draw your custom sprite on screen and add one short label under it.
 
 ## Reflection
 How is a sprite like a tiny grid of yes/no choices?

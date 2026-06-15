@@ -43,6 +43,8 @@ How `%` works:
 - `gb.frameCount % 20` gives a value from `0` to `19`, then starts over.
 - That means the condition is true for part of the cycle and false for part of the cycle, which makes blinking possible.
 - Example: `7 % 3` is `1` because `7` divided by `3` leaves remainder `1`.
+- `gb.update()` is the timing gate for one frame. Put your drawing inside it so the screen refreshes in a clean, steady loop.
+- `F("text")` stores a fixed message efficiently so the Gamebuino has more working memory left for the game.
 
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
@@ -67,10 +69,7 @@ If you get stuck, check the line above the first error message first. Missing se
 Try this tiny repair challenge before changing more of your own sketch:
 
 ```cpp
-// Finish the broken line and explain what was missing.
-if (gb.buttons.pressed(BTN_A)) {
-  score = score + 1
-}
+gb.display.println(F("My Game")
 ```
 
 ## Power-Ups
@@ -80,9 +79,6 @@ After the checkpoint works, try one small upgrade inside this same sketch:
 - Feel: change speed, timing, feedback, or button behavior.
 - Rule: add one score, life, timer, win, or loss twist.
 - Debug: make one tiny bug on purpose, then fix it and explain the fix.
-
-## Boss Fight
-Combine this mission with one older mission. Keep the change small enough to test today.
 
 ## Reflection
 Why do you think the course starts with output before movement?

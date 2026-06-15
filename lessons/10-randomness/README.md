@@ -36,8 +36,9 @@ How `random()` works:
 
 - `random(min, max)` picks a number in a range.
 - The first number is the smallest possible value.
-- The second number is the upper limit.
+- The second number is the upper limit, but it is not included.
 - In this lesson, that range keeps the object on screen instead of letting it spawn partly off the edge.
+- Example: `random(0, 5)` can return `0`, `1`, `2`, `3`, or `4`.
 
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
@@ -62,10 +63,7 @@ If you get stuck, check the line above the first error message first. Missing se
 Try this tiny repair challenge before changing more of your own sketch:
 
 ```cpp
-// Finish the broken line and explain what was missing.
-if (gb.buttons.pressed(BTN_A)) {
-  score = score + 1
-}
+starX = random(0, LCDWIDTH - starW
 ```
 
 ## Power-Ups
@@ -77,7 +75,7 @@ After the checkpoint works, try one small upgrade inside this same sketch:
 - Debug: make one tiny bug on purpose, then fix it and explain the fix.
 
 ## Boss Fight
-Combine this mission with one older mission. Keep the change small enough to test today.
+Make an object respawn at a random x position after it is collected or leaves the screen.
 
 ## Reflection
 Why should random ranges avoid the right and bottom edges?

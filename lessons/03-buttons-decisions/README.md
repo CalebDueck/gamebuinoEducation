@@ -42,6 +42,8 @@ How `if` works:
 - If the condition inside `()` is true, the code inside `{}` runs.
 - If the condition is false, that block is skipped.
 - In this example, the popup happens only when A is pressed.
+- `pressed()` is best for one-time actions such as menus, jumping, or a popup.
+- `repeat()` is best for held movement because it keeps firing while the button stays down.
 
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
@@ -66,10 +68,8 @@ If you get stuck, check the line above the first error message first. Missing se
 Try this tiny repair challenge before changing more of your own sketch:
 
 ```cpp
-// Finish the broken line and explain what was missing.
 if (gb.buttons.pressed(BTN_A)) {
-  score = score + 1
-}
+  gb.popup(F("A!"), 15);
 ```
 
 ## Power-Ups
@@ -79,9 +79,6 @@ After the checkpoint works, try one small upgrade inside this same sketch:
 - Feel: change speed, timing, feedback, or button behavior.
 - Rule: add one score, life, timer, win, or loss twist.
 - Debug: make one tiny bug on purpose, then fix it and explain the fix.
-
-## Boss Fight
-Combine this mission with one older mission. Keep the change small enough to test today.
 
 ## Reflection
 When should a game use `pressed()` instead of `repeat()`?

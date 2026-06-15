@@ -40,17 +40,17 @@ Follow this path:
 5. Read `SETUP_GAMEBUINO_CLASSIC.md` and get one device working.
 6. Start Lesson 00 in `lessons/00-setup/README.md`.
 7. Open `lessons/00-setup/welcome_badge.ino` and complete the Lesson 00 mission.
-8. Read `COURSE_GUIDE.md` for the bigger picture and full course arc.
-9. After that, move through the numbered lesson folders in order: `01`, `02`, `03`, and so on.
+8. After that, move through the numbered lesson folders in order: `01`, `02`, `03`, and so on.
 
 Inside each lesson:
 
 - read the lesson `README.md`
 - update the sketch or template in that lesson folder
-- use `quest-log.md` and `hints.md` only when needed
 - save stretch paths for later unless the core mission is already working
 
-Keep `PROGRAMMER_SUPPORT.md` open for troubleshooting habits and the hints-first LLM prompt.
+The learner-facing lesson flow lives in each lesson `README.md`. You should not need to jump between several lesson files.
+
+If you are teaching, supporting, or checking the full course arc, read `COURSE_GUIDE.md` after Lesson 00. It is optional for the learner.
 
 ## License and Contact
 
@@ -62,6 +62,7 @@ Contact: `calebdueck@gmail.com`
 
 ## Stretch Paths
 
+- debugging challenges
 - Git and sprite gallery
 - code archaeology
 - advanced graphics

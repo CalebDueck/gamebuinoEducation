@@ -32,11 +32,19 @@ Useful snippet card:
 Controls: LEFT/RIGHT move. A restarts after game over.
 ```
 
+How this mission works:
+
+- A `README` is a short note for the next player or for future-you.
+- It should answer three things first: what the game is, how to control it, and how the game ends.
+- A playtest means you stop building, play the game as if you were new to it, and write down one confusing moment.
+- A changelog can be one short list of what you improved after testing.
+- For this mission, a simple markdown note next to your sketch is enough. It does not need to be long.
+
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
 ## Core Quest
-1. Write the game title and goal.
-2. Document controls.
+1. Write the game title and goal in a short player README.
+2. Document controls and restart rules.
 3. Put the game down, come back later, and try it without reading your notes.
 4. Fix one confusing moment.
 5. Add one polish change.
@@ -54,11 +62,9 @@ If you get stuck, check the line above the first error message first. Missing se
 
 Try this tiny repair challenge before changing more of your own sketch:
 
-```cpp
-// Finish the broken line and explain what was missing.
-if (gb.buttons.pressed(BTN_A)) {
-  score = score + 1
-}
+```md
+# Falling Stars
+Controls LEFT/RIGHT move
 ```
 
 ## Power-Ups
@@ -70,7 +76,7 @@ After the checkpoint works, try one small upgrade inside this same sketch:
 - Debug: make one tiny bug on purpose, then fix it and explain the fix.
 
 ## Boss Fight
-Combine this mission with one older mission. Keep the change small enough to test today.
+Make one change from playtest feedback, then update the README so another player knows the controls and goal.
 
 ## Reflection
 What did a playtester notice that you missed?

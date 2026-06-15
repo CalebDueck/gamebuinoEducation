@@ -32,6 +32,12 @@ Useful snippet card:
 gb.display.drawBitmap(playerX, playerY, HERO_EXAMPLE);
 ```
 
+How sprite movement works:
+
+- `drawBitmap(playerX, playerY, HERO_EXAMPLE)` uses `playerX` and `playerY` as the sprite's upper-left corner.
+- `playerW` and `playerH` tell the program how much screen space the sprite uses.
+- Bounds code needs the sprite size, or the picture can slide partly off the screen.
+
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
 ## Core Quest
@@ -55,10 +61,7 @@ If you get stuck, check the line above the first error message first. Missing se
 Try this tiny repair challenge before changing more of your own sketch:
 
 ```cpp
-// Finish the broken line and explain what was missing.
-if (gb.buttons.pressed(BTN_A)) {
-  score = score + 1
-}
+gb.display.drawBitmap(playerX, playerY, HERO_EXAMPLE)
 ```
 
 ## Power-Ups
@@ -70,7 +73,7 @@ After the checkpoint works, try one small upgrade inside this same sketch:
 - Debug: make one tiny bug on purpose, then fix it and explain the fix.
 
 ## Boss Fight
-Combine this mission with one older mission. Keep the change small enough to test today.
+Replace the default sprite with your own and make it move without leaving the screen.
 
 ## Reflection
 What changed when the square became a sprite?

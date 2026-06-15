@@ -46,6 +46,7 @@ How `==` and game states work:
 - `if (lives == 0)` means "if lives is equal to zero."
 - A game state is a label for the current mode of the game, such as title, playing, or game over.
 - Changing `gameState` tells the program which part of the game should run next.
+- Build and test one state at a time. Get the title screen working before the playing state, and get the playing state working before game over.
 
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
@@ -88,9 +89,8 @@ If you get stuck, check the line above the first error message first. Missing se
 Try this tiny repair challenge before changing more of your own sketch:
 
 ```cpp
-// Finish the broken line and explain what was missing.
-if (gb.buttons.pressed(BTN_A)) {
-  score = score + 1
+if (lives = 0) {
+  gameState = STATE_GAME_OVER;
 }
 ```
 
@@ -103,7 +103,7 @@ After the checkpoint works, try one small upgrade inside this same sketch:
 - Debug: make one tiny bug on purpose, then fix it and explain the fix.
 
 ## Boss Fight
-Combine this mission with one older mission. Keep the change small enough to test today.
+Add one new rule to Falling Stars, such as faster stars, a bonus catch, or an extra life pickup.
 
 ## Reflection
 Which function owns the rule for catching or missing a star?

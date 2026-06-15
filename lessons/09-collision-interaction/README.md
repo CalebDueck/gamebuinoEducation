@@ -33,6 +33,13 @@ if (gb.collideRectRect(playerX, playerY, playerW, playerH, coinX, coinY, coinW, 
 }
 ```
 
+How rectangle collision works:
+
+- A rectangle needs four numbers: `x`, `y`, `width`, and `height`.
+- The first four values describe the player rectangle.
+- The second four values describe the coin rectangle.
+- If the two rectangles overlap, the condition becomes true and the code inside the `if` runs.
+
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
 ## Core Quest
@@ -56,9 +63,8 @@ If you get stuck, check the line above the first error message first. Missing se
 Try this tiny repair challenge before changing more of your own sketch:
 
 ```cpp
-// Finish the broken line and explain what was missing.
-if (gb.buttons.pressed(BTN_A)) {
-  score = score + 1
+if (gb.collideRectRect(playerX, playerY, playerW, playerH, coinX, coinY, coinW, coinH) {
+  score = score + 1;
 }
 ```
 
@@ -71,7 +77,7 @@ After the checkpoint works, try one small upgrade inside this same sketch:
 - Debug: make one tiny bug on purpose, then fix it and explain the fix.
 
 ## Boss Fight
-Combine this mission with one older mission. Keep the change small enough to test today.
+Add a second collectible or a hazard, then make collision change score or lives.
 
 ## Reflection
 What are the four numbers that describe one rectangle?

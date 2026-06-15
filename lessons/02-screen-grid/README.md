@@ -44,6 +44,8 @@ How screen coordinates work:
 - Bigger `x` moves right.
 - Bigger `y` moves down.
 - `LCDWIDTH` and `LCDHEIGHT` tell you the screen size, so you do not have to memorize the numbers.
+- `drawRect(x, y, w, h)` uses position first, then size.
+- `fillRect(x, y, w, h)` works the same way, but fills the shape in.
 
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
@@ -68,10 +70,7 @@ If you get stuck, check the line above the first error message first. Missing se
 Try this tiny repair challenge before changing more of your own sketch:
 
 ```cpp
-// Finish the broken line and explain what was missing.
-if (gb.buttons.pressed(BTN_A)) {
-  score = score + 1
-}
+gb.display.fillRect(4, 4, 6, 6)
 ```
 
 ## Power-Ups
@@ -81,9 +80,6 @@ After the checkpoint works, try one small upgrade inside this same sketch:
 - Feel: change speed, timing, feedback, or button behavior.
 - Rule: add one score, life, timer, win, or loss twist.
 - Debug: make one tiny bug on purpose, then fix it and explain the fix.
-
-## Boss Fight
-Combine this mission with one older mission. Keep the change small enough to test today.
 
 ## Reflection
 What happens to y when a shape moves down?

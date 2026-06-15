@@ -66,10 +66,7 @@ If you get stuck, check the line above the first error message first. Missing se
 Try this tiny repair challenge before changing more of your own sketch:
 
 ```cpp
-// Finish the broken line and explain what was missing.
-if (gb.buttons.pressed(BTN_A)) {
-  score = score + 1
-}
+drawHud()
 ```
 
 ## Power-Ups
@@ -81,7 +78,7 @@ After the checkpoint works, try one small upgrade inside this same sketch:
 - Debug: make one tiny bug on purpose, then fix it and explain the fix.
 
 ## Boss Fight
-Combine this mission with one older mission. Keep the change small enough to test today.
+Move one repeated job into its own function, then call that function from the main loop.
 
 ## Reflection
 Why is a named function easier to debug than one huge loop?

@@ -1,8 +1,10 @@
 # Course Guide
 
-This is the main course-facing reference for the repo. It explains the learning path, support philosophy, and build norms for anyone using the course independently.
+This guide is for teachers, parents, mentors, and anyone supporting the course. It explains the learning path, support philosophy, and build norms around the learner-facing lesson READMEs.
 
 If you have never programmed before, start by skimming `ARDUINO_FUNDAMENTALS.md`.
+
+If you are the learner, you can skip this file and stay inside the numbered lesson folders.
 
 ## Course Arc
 
@@ -12,7 +14,7 @@ The progression is:
 
 setup -> screen output -> coordinates -> buttons -> variables -> movement -> sprites -> functions -> collision -> randomness -> score/lives/game states -> complete game -> polish/share
 
-The core path is beginner-friendly. Challenge Quests, Power-Ups, Boss Fights, Code Archaeology, Git, and multiplayer stretch advanced gameBuilders without raising the floor for everyone else.
+The core path is beginner-friendly. Challenge Quests, Power-Ups, Boss Fights, debugging stretch quests, Code Archaeology, Git, and multiplayer stretch advanced gameBuilders without raising the floor for everyone else.
 
 ## Hardware Scope
 
@@ -66,8 +68,7 @@ The public repo should not contain full solutions for every lesson. Learners nee
 GameBuilders may use:
 
 - lesson README snippet cards
-- hints
-- debug puzzles
+- debug puzzles in the lesson README
 - official references during Code Archaeology
 
 GameBuilders should not paste:
@@ -98,7 +99,7 @@ Before asking for help, gameBuilders answer:
 
 ## Differentiation
 
-Core Quests are required. Challenge Quests, Power-Ups, Boss Fights, Code Archaeology, Git, and multiplayer extend the work without raising the floor.
+Core Quests are required. Challenge Quests, Power-Ups, Boss Fights, debugging stretch quests, Code Archaeology, Git, and multiplayer extend the work without raising the floor.
 
 Use the Challenge Quest when a gameBuilder can explain the checkpoint without reading their code line by line.
 

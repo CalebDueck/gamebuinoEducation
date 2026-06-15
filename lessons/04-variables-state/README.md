@@ -42,6 +42,7 @@ How variables and `=` work:
 - `int score = 0;` creates a variable named `score` and starts it at `0`.
 - `=` means assignment, or "store this value here."
 - `score = score + 1;` means take the old score, add `1`, and store the new score back into `score`.
+- A `byte` stores small whole numbers from `0` to `255`, which is useful for things like lives or small counters.
 
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
@@ -66,10 +67,7 @@ If you get stuck, check the line above the first error message first. Missing se
 Try this tiny repair challenge before changing more of your own sketch:
 
 ```cpp
-// Finish the broken line and explain what was missing.
-if (gb.buttons.pressed(BTN_A)) {
-  score = score + 1
-}
+int score = 0
 ```
 
 ## Power-Ups
@@ -79,9 +77,6 @@ After the checkpoint works, try one small upgrade inside this same sketch:
 - Feel: change speed, timing, feedback, or button behavior.
 - Rule: add one score, life, timer, win, or loss twist.
 - Debug: make one tiny bug on purpose, then fix it and explain the fix.
-
-## Boss Fight
-Combine this mission with one older mission. Keep the change small enough to test today.
 
 ## Reflection
 What value does your game need to remember between frames?

@@ -33,6 +33,13 @@ Useful snippet card:
 Required: input, visible player, one interaction, one function, start or game-over screen, README.
 ```
 
+How to scope the project:
+
+- A `prototype` is the smallest version that proves the game idea works.
+- `scope` means deciding what fits in the time you have.
+- `iteration` means building a simple version first, then improving it in small passes.
+- Write the README as a short player guide next to your sketch or inside your project folder.
+
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
 ## Core Quest
@@ -42,7 +49,7 @@ Do not paste a finished sketch from another file. If you use a snippet card, exp
 4. Add scoring, lives, timer, or progress.
 5. Add one interaction.
 6. Add a start or game-over screen.
-7. Write the README.
+7. Write the README with the game goal, controls, and win or loss condition.
 
 ## Challenge Quest
 Add one advanced feature from the project menu.
@@ -58,9 +65,8 @@ If you get stuck, check the line above the first error message first. Missing se
 Try this tiny repair challenge before changing more of your own sketch:
 
 ```cpp
-// Finish the broken line and explain what was missing.
-if (gb.buttons.pressed(BTN_A)) {
-  score = score + 1
+if (gb.buttons.pressed(BTN_A) {
+  gameState = STATE_PLAYING;
 }
 ```
 
@@ -73,7 +79,7 @@ After the checkpoint works, try one small upgrade inside this same sketch:
 - Debug: make one tiny bug on purpose, then fix it and explain the fix.
 
 ## Boss Fight
-Combine this mission with one older mission. Keep the change small enough to test today.
+Finish one complete playable version with controls, a goal, and a start or game-over screen.
 
 ## Reflection
 What did you cut or simplify so the game could actually ship?
