@@ -20,6 +20,13 @@ You are not trying to type a finished game all at once. You are collecting one p
 ## Starter File
 Open `sprite_lab_starter.ino`.
 
+Important file location note:
+
+- The sprite source file for this mission is in the repo-wide `assets/` folder, not inside `lessons/06-monochrome-sprites/`.
+- Use `assets/sprites/hero_example.sprite.txt` for the editable text sprite.
+- The generated header is written to `assets/generated/example_sprites.h`.
+- Open those files from the repo root or file tree if you do not see them in the lesson folder.
+
 ## Quest Log
 1. Read the TODO labels in the starter before changing code.
 2. Predict the visible result of the next TODO.
@@ -43,6 +50,7 @@ How sprite files and tools work:
 - `python3 tools/sprite_validator.py ...` checks whether the text sprite has valid rows and dimensions.
 - `python3 tools/sprite_to_bitmap.py ...` turns that text sprite into C++ bitmap data the Gamebuino can draw.
 - Run those commands from the repo root folder.
+- The input and output files for this mission both live under `assets/`, not in the lesson folder.
 - `PROGMEM` means the bitmap is stored as fixed data instead of taking up scarce working memory.
 - `drawBitmap(x, y, SPRITE_NAME)` draws that fixed image at one screen position.
 
@@ -52,7 +60,7 @@ Do not paste a finished sketch from another file. If you use a snippet card, exp
 1. Open `assets/sprites/hero_example.sprite.txt`.
 2. Change three pixels, then validate it.
 3. Convert the sprite to a header.
-4. Open the sprite lab starter.
+4. Open the sprite lab starter and notice that it includes the generated header from `assets/generated/`.
 5. Draw the generated bitmap.
 6. Save a separate sprite gallery file if you want to include it in the gallery later.
 
