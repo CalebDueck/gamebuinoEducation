@@ -18,7 +18,7 @@ You are not trying to type a finished game all at once. You are collecting one p
 - `iteration`
 
 ## Starter File
-Open `templates/` and choose one game idea folder.
+Open `templates/` and choose one game idea folder. Each folder includes a planning `README.md` and a runnable `*_starter.ino` sketch.
 
 ## Quest Log
 1. Read the TODO labels in the starter before changing code.

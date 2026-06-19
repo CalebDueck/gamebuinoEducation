@@ -9,7 +9,7 @@ Goal:
 For sprite gallery work:
 
 - create your own `.sprite.txt` file under `class_gallery/submissions/`
-- run `python tools/sprite_validator.py your_file.sprite.txt` before committing
+- run `python3 tools/sprite_validator.py your_file.sprite.txt` before committing
 
 Then:
 

@@ -1,3 +1,16 @@
 # Door Key Game
 
-Plan your controls, player feedback, win/loss condition, and one customization point.
+Starter file: `door_key_game_starter.ino`
+
+Build the smallest version first:
+
+- Move a player around the screen.
+- Touch the key first.
+- Open the door only after the key is collected.
+- Show a win screen when the door is reached.
+
+Customization ideas:
+
+- Add walls or obstacles.
+- Hide the key in a new spot after each win.
+- Track the number of moves or time.

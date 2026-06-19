@@ -11,7 +11,7 @@ The sprite gallery uses one `.sprite.txt` file per gameBuilder inside `class_gal
 Before adding your gallery contribution:
 
 - make sure you are editing only your own file
-- validate it with `python tools/sprite_validator.py your_file.sprite.txt`
+- validate it with `python3 tools/sprite_validator.py your_file.sprite.txt`
 
 Then:
 

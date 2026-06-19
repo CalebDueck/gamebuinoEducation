@@ -30,18 +30,18 @@ Open `sprite_lab_starter.ino`.
 Useful snippet card:
 
 ```bash
-python tools/sprite_validator.py assets/sprites/hero_example.sprite.txt
+python3 tools/sprite_validator.py assets/sprites/hero_example.sprite.txt
 ```
 ```bash
-python tools/sprite_to_bitmap.py assets/sprites/hero_example.sprite.txt --out assets/generated/example_sprites.h
+python3 tools/sprite_to_bitmap.py assets/sprites/hero_example.sprite.txt --out assets/generated/example_sprites.h
 ```
 
 How sprite files and tools work:
 
 - A `.sprite.txt` file is a tiny picture made from text characters in a grid.
 - Each row needs the same number of columns, or the converter will not know the sprite width.
-- `python tools/sprite_validator.py ...` checks whether the text sprite has valid rows and dimensions.
-- `python tools/sprite_to_bitmap.py ...` turns that text sprite into C++ bitmap data the Gamebuino can draw.
+- `python3 tools/sprite_validator.py ...` checks whether the text sprite has valid rows and dimensions.
+- `python3 tools/sprite_to_bitmap.py ...` turns that text sprite into C++ bitmap data the Gamebuino can draw.
 - Run those commands from the repo root folder.
 - `PROGMEM` means the bitmap is stored as fixed data instead of taking up scarce working memory.
 - `drawBitmap(x, y, SPRITE_NAME)` draws that fixed image at one screen position.
