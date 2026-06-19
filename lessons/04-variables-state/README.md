@@ -44,6 +44,14 @@ How variables and `=` work:
 - `score = score + 1;` means take the old score, add `1`, and store the new score back into `score`.
 - A `byte` stores small whole numbers from `0` to `255`, which is useful for things like lives or small counters.
 
+Expected test results for this mission:
+
+- Before pressing anything, the screen should show `Score: 0` and `Lives: 3`.
+- After pressing A once, only `score` should change by `+1`.
+- After pressing B once, only the value you chose for B should change by `-1`.
+- After pressing C once, only the value you chose to reset should jump back to its start value.
+- If one button press seems to do two jobs, check whether two `if` statements are listening for the same button constant.
+
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
 ## Core Quest
@@ -60,9 +68,21 @@ Add a target score that displays Win when score reaches 10.
 - Score starts at 0.
 - A changes score by exactly 1.
 - A second button changes or resets another value.
+- Each button has one clear test result that you can describe before pressing it.
 
 ## Bug Hunt
 If you get stuck, check the line above the first error message first. Missing semicolons, missing braces, wrong capitalization, and code outside the right function cause a lot of beginner bugs.
+
+This mission can also fail with logic bugs even when the sketch compiles.
+
+Quick logic checks:
+
+- Press A once. Did only `score` change?
+- Press B once. Did the value change in the direction you expected?
+- Press C once. Did only the reset behavior happen?
+- If nothing changes, check whether your assignment line is inside the right `if` block.
+- If the wrong value changes, check which variable name you edited.
+- If two buttons act the same, check whether they both use the same `BTN_...` constant by accident.
 
 Try this tiny repair challenge before changing more of your own sketch:
 
