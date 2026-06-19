@@ -10,9 +10,11 @@ void setup() {
 
 void loop() {
   if (gb.update()) {
+    // This line is normal screen text, so it is redrawn every frame.
     gb.display.println(F("Press buttons"));
 
     // CORE QUEST 1: A and B already work. Test them first.
+    // These are popup messages, so they appear briefly when the event happens.
     if (gb.buttons.pressed(BTN_A)) {
       gb.popup(F("A pressed"), 15);
     }
@@ -24,6 +26,8 @@ void loop() {
 
 
     // CORE QUEST 3: Add UP, DOWN, LEFT, and RIGHT.
+    // Scope note: this mission is about input and reactions.
+    // If you want a score counter that remembers values, Mission 04 introduces that on purpose.
 
   }
 }

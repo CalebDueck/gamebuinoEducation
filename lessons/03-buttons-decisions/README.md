@@ -36,14 +36,23 @@ if (gb.buttons.pressed(BTN_A)) {
 }
 ```
 
-How `if` works:
+How `if`, `popup()`, and button feedback work:
 
 - An `if` statement checks whether something is true.
 - If the condition inside `()` is true, the code inside `{}` runs.
 - If the condition is false, that block is skipped.
 - In this example, the popup happens only when A is pressed.
+- `gb.popup(F("A!"), 15)` shows a short temporary message with popup-style feedback, then disappears on its own.
+- `gb.display.print()` and `gb.display.println()` draw normal text as part of the current frame. They do not create popup behavior by themselves.
+- Use `print()` when you want a label that stays on the screen. Use `popup()` when you want a short event message such as "A pressed" or "Door unlocked".
 - `pressed()` is best for one-time actions such as menus, jumping, or a popup.
 - `repeat()` is best for held movement because it keeps firing while the button stays down.
+
+Scope note:
+
+- Mission 03 is about detecting buttons and choosing reactions.
+- Mission 04 is where the course first builds a score or lives system with variables.
+- If you catch yourself wanting a counter that remembers values between button presses, that is the next mission on purpose.
 
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
@@ -77,7 +86,7 @@ After the checkpoint works, try one small upgrade inside this same sketch:
 
 - Cosmetic: change text, shape, sprite, layout, or theme.
 - Feel: change speed, timing, feedback, or button behavior.
-- Rule: add one score, life, timer, win, or loss twist.
+- Rule: add one message, mode, or button-response twist for now. Save score or lives tracking for Mission 04.
 - Debug: make one tiny bug on purpose, then fix it and explain the fix.
 
 ## Reflection
