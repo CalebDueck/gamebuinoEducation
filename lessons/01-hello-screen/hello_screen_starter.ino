@@ -20,6 +20,8 @@ void loop() {
     gb.display.println();
     gb.display.println(F("Press A"));
 
-    // POWER-UP: use gb.frameCount to make something blink.
+    // POWER-UP: use gb.frameCount to blink only the prompt line.
+    // Keep the same line count each frame so later text does not slide upward.
+    // Example idea: print "Press A" when the condition is true, otherwise print a blank line.
   }
 }

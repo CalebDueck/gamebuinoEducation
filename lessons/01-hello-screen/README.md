@@ -34,17 +34,22 @@ gb.display.println(F("My Game"));
 ```cpp
 if (gb.frameCount % 20 < 10) {
   gb.display.println(F("Press A"));
+} else {
+  gb.display.println();
 }
 ```
 
-How `%` works:
+How `gb.frameCount` and `%` work:
 
+- `gb.frameCount` is a number that goes up by `1` each time a new frame is drawn.
+- You can treat it like a built-in timer that keeps counting while the game runs.
 - `%` means modulo, or remainder after division.
 - `gb.frameCount % 20` gives a value from `0` to `19`, then starts over.
 - That means the condition is true for part of the cycle and false for part of the cycle, which makes blinking possible.
 - Example: `7 % 3` is `1` because `7` divided by `3` leaves remainder `1`.
 - `gb.update()` is the timing gate for one frame. Put your drawing inside it so the screen refreshes in a clean, steady loop.
 - `F("text")` stores a fixed message efficiently so the Gamebuino has more working memory left for the game.
+- If you blink a line with `println`, keep that line reserved. Print the message when the condition is true, and print a blank line when it is false, so the lines below do not jump upward.
 
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
@@ -57,6 +62,8 @@ Do not paste a finished sketch from another file. If you use a snippet card, exp
 
 ## Challenge Quest
 Make one line blink every half second using `gb.frameCount`.
+
+Tip: Blink the prompt line, not the title line. Keep the title and name printed every frame.
 
 ## Checkpoint
 - Your game title appears.
