@@ -48,6 +48,16 @@ How `==` and game states work:
 - Changing `gameState` tells the program which part of the game should run next.
 - Build and test one state at a time. Get the title screen working before the playing state, and get the playing state working before game over.
 
+Expected staged test results:
+
+- Title test: before pressing A, you should still be on the title screen.
+- Start test: pressing A should move from title to playing.
+- Movement test: LEFT and RIGHT should move only the player, not the star.
+- Falling test: the star should move down every frame during play.
+- Miss test: when the star reaches the bottom, one life should be lost and the star should reset to the top.
+- Catch test: when the player catches the star, score should increase and the star should reset.
+- Game-over test: when lives reaches `0`, the game should switch to the game-over screen.
+
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
 ## Core Quest
@@ -68,6 +78,7 @@ Increase star speed every 5 points.
 - Score changes when caught.
 - Lives change when missed.
 - Game over appears at 0 lives.
+- You can describe the expected result of the next state before you test it.
 
 ## Reference File
 
@@ -85,6 +96,17 @@ When you do open the reference, use it for Code Archaeology: find one function, 
 
 ## Bug Hunt
 If you get stuck, check the line above the first error message first. Missing semicolons, missing braces, wrong capitalization, and code outside the right function cause a lot of beginner bugs.
+
+This mission can also fail with logic bugs even when it compiles.
+
+Quick logic checks:
+
+- If A does nothing on the title screen, inspect `updateTitle()`.
+- If the player does not move, inspect `updatePlayer()`.
+- If the star never moves, inspect `updateStar()` and the `starY` update line.
+- If lives never change, test the miss path without trying to catch the star.
+- If score changes too often, check whether the star resets immediately after a catch.
+- If game over never appears, check the exact condition that switches `gameState`.
 
 Try this tiny repair challenge before changing more of your own sketch:
 

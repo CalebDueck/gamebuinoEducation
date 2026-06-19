@@ -10,11 +10,13 @@ int starY = 12;
 int score = 0;
 
 void resetStar() {
-  // CORE QUEST 1: randomize starX in a safe screen range.
-  starX = random(0, LCDWIDTH - 4);
+  // CORE QUEST 1: replace this fixed x with random x in a safe screen range.
+  // Test result: after collection, the star should not always come back to the same x position.
+  starX = 20;
 
-  // CORE QUEST 2: randomize starY in a safe screen range.
-  starY = random(8, LCDHEIGHT - 12);
+  // CORE QUEST 2: replace this fixed y with random y in a safe screen range.
+  // Test result: after collection, the star should stay on screen instead of spawning partly off the edge.
+  starY = 12;
 }
 
 void setup() {
@@ -33,6 +35,7 @@ void loop() {
     }
 
     // CORE QUEST 3: collect the star and reset it.
+    // Before resetStar() is finished, the star may return to the same place every time.
     if (gb.collideRectRect(playerX, playerY, 6, 6, starX, starY, 4, 4)) {
       score++;
       resetStar();

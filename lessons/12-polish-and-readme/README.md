@@ -39,6 +39,13 @@ How this mission works:
 - A playtest means you stop building, play the game as if you were new to it, and write down one confusing moment.
 - A changelog can be one short list of what you improved after testing.
 - For this mission, a simple markdown note next to your sketch is enough. It does not need to be long.
+- A clear option is to create a file named `README-player.md` inside `lessons/12-polish-and-readme/` or inside your own final project folder.
+
+Expected test results for this mission:
+
+- A new player should be able to read your note and start playing without asking what the controls are.
+- After your playtest fix, one confusing moment should be gone or reduced.
+- Your polish change should improve clarity or feel without breaking the core game loop.
 
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
@@ -56,6 +63,7 @@ Add a title screen, credits line, or difficulty choice.
 - A title or start screen exists.
 - Controls are documented.
 - You can play it again without guessing the controls.
+- Your README lives in a clear place you can point to.
 
 ## Bug Hunt
 If you get stuck, check the line above the first error message first. Missing semicolons, missing braces, wrong capitalization, and code outside the right function cause a lot of beginner bugs.

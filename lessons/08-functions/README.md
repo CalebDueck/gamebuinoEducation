@@ -45,6 +45,13 @@ How functions work:
 
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
+Expected test results for this mission:
+
+- If movement is broken, `updatePlayer()` is the first function to inspect.
+- If the square disappears, `drawPlayer()` is the first function to inspect.
+- If the score text is missing, `drawHud()` is the first function to inspect.
+- A function only helps if the right job is placed inside it and the function is still called from `loop()`.
+
 ## Core Quest
 1. Find each function call in `loop()`.
 2. Complete `updatePlayer()`.
@@ -59,6 +66,7 @@ Add `resetPlayer()` and call it when C is pressed.
 - Movement code lives in `updatePlayer()`.
 - Drawing code lives in `drawPlayer()`.
 - HUD code is separated.
+- You can name which function to inspect for one specific bug.
 
 ## Bug Hunt
 If you get stuck, check the line above the first error message first. Missing semicolons, missing braces, wrong capitalization, and code outside the right function cause a lot of beginner bugs.

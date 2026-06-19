@@ -43,6 +43,7 @@ void resetStar() {
 }
 
 void updateTitle() {
+  // Test result: before pressing A, this title screen should stay visible.
   gb.display.println(F("Falling Stars"));
   gb.display.println(F("Press A"));
   if (gb.buttons.pressed(BTN_A)) {
@@ -53,6 +54,7 @@ void updateTitle() {
 
 void updatePlayer() {
   // CORE QUEST 2: move left when LEFT is held.
+  // Test result: LEFT and RIGHT should move only the player.
 
 
   // CORE QUEST 3: move right when RIGHT is held.
@@ -64,15 +66,19 @@ void updatePlayer() {
 
 void updateStar() {
   // CORE QUEST 5: make the star fall by adding starSpeed to starY.
+  // Test result: during play, the star should move downward every frame.
 
 
   // CORE QUEST 6: if the star reaches the bottom, subtract one life and reset it.
+  // Test result: one miss should cost one life and send the star back to the top.
 
 
   // CORE QUEST 7: if the player catches the star, add score and reset it.
+  // Test result: one catch should add one score and move the star away from the player.
 
 
   // CORE QUEST 8: when lives reaches 0, switch to STATE_GAME_OVER.
+  // Test result: at 0 lives, the game-over screen should appear.
 
 }
 

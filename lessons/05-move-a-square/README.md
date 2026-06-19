@@ -53,6 +53,13 @@ How comparisons work:
 
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
+Expected test results for this mission:
+
+- Before pressing anything, the square should stay still on screen.
+- LEFT and RIGHT should change only `playerX`.
+- UP and DOWN should change only `playerY`.
+- After you add bounds, the square should stop at the screen edges instead of disappearing off screen.
+
 ## Core Quest
 1. Run the starter and identify the square.
 2. Add UP movement only.

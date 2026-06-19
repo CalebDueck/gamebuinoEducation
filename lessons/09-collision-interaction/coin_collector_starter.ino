@@ -34,10 +34,12 @@ void loop() {
     updatePlayer();
 
     // CORE QUEST 1: read this collision condition.
+    // Test result: score should change only when the player actually touches the coin.
     if (gb.collideRectRect(playerX, playerY, playerW, playerH, coinX, coinY, coinW, coinH)) {
       score = score + 1;
 
       // CORE QUEST 2: move the coin somewhere new after collection.
+      // Test result: after one collection, the coin should no longer overlap the player.
       coinX = 10;
       coinY = 10;
     }

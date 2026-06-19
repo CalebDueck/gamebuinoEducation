@@ -37,8 +37,16 @@ How `random()` works:
 - `random(min, max)` picks a number in a range.
 - The first number is the smallest possible value.
 - The second number is the upper limit, but it is not included.
+- That means `random(0, 5)` can never return `5`.
 - In this lesson, that range keeps the object on screen instead of letting it spawn partly off the edge.
 - Example: `random(0, 5)` can return `0`, `1`, `2`, `3`, or `4`.
+
+Expected test results for this mission:
+
+- Before you finish `resetStar()`, the collectible may keep returning to the same place.
+- After randomizing `starX`, repeated collections should move the collectible to different horizontal positions.
+- After randomizing `starY`, repeated collections should move it to different safe vertical positions too.
+- If the collectible partly disappears off screen, check whether your max range forgot to subtract the object size.
 
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
@@ -56,6 +64,7 @@ Add a rare bonus item or random point value.
 - A collectible appears.
 - Collecting it moves it to a random spot.
 - Restarting the game does not always feel identical.
+- You can explain why the top random limit is excluded.
 
 ## Bug Hunt
 If you get stuck, check the line above the first error message first. Missing semicolons, missing braces, wrong capitalization, and code outside the right function cause a lot of beginner bugs.

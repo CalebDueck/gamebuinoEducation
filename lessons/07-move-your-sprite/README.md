@@ -19,6 +19,12 @@ You are not trying to type a finished game all at once. You are collecting one p
 ## Starter File
 Open `move_your_sprite_starter.ino`.
 
+Important file location note:
+
+- This starter uses the generated sprite header from the repo-wide `assets/` folder, not from `lessons/07-move-your-sprite/`.
+- The default include points to `assets/generated/example_sprites.h`.
+- If you made your own sprite in Mission 06, convert it into `assets/generated/` first, then update the include only if your file name is different.
+
 ## Quest Log
 1. Read the TODO labels in the starter before changing code.
 2. Predict the visible result of the next TODO.
@@ -37,6 +43,13 @@ How sprite movement works:
 - `drawBitmap(playerX, playerY, HERO_EXAMPLE)` uses `playerX` and `playerY` as the sprite's upper-left corner.
 - `playerW` and `playerH` tell the program how much screen space the sprite uses.
 - Bounds code needs the sprite size, or the picture can slide partly off the screen.
+- The generated sprite data file is not stored in this lesson folder. It lives in `assets/generated/`.
+
+Expected test results for this mission:
+
+- Before movement code changes, the sprite should appear at its starting position.
+- LEFT and RIGHT should move the sprite without changing `playerY`.
+- After bounds are added, the sprite should stop at the screen edges instead of clipping off screen.
 
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
