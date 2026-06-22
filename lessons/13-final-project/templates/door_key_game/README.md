@@ -2,6 +2,8 @@
 
 Starter file: `door_key_game_starter.ino`
 
+This starter is intentionally incomplete. You still need to write the movement, key, and door logic yourself.
+
 Build the smallest version first:
 
 - Move a player around the screen.

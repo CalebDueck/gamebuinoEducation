@@ -5,12 +5,15 @@ Use button input and if statements so the player can make the program react.
 
 You are not trying to type a finished game all at once. You are collecting one piece of new gear, testing it, and then using it in the Falling Stars questline.
 
-## Learning Targets
+**How This Contributes To Falling Stars**
+This lesson teaches you how the game will react to button presses for controls, starting, and restarting.
+
+## Key Terms
 - Write an `if` statement.
 - Use Gamebuino button constants.
 - Choose `pressed()` for events and `repeat()` for held movement.
 
-## New Gear
+**Terms and Syntax**
 - `if`
 - `BTN_A`
 - `BTN_B`
@@ -18,10 +21,21 @@ You are not trying to type a finished game all at once. You are collecting one p
 - `pressed()`
 - `repeat()`
 
+**How It Works**
+- An `if` statement checks whether something is true.
+- If the condition inside `()` is true, the code inside `{}` runs.
+- If the condition is false, that block is skipped.
+- In this example, the popup happens only when A is pressed.
+- `gb.popup(F("A!"), 15)` shows a short temporary message with popup-style feedback, then disappears on its own.
+- `gb.display.print()` and `gb.display.println()` draw normal text as part of the current frame. They do not create popup behavior by themselves.
+- Use `print()` when you want a label that stays on the screen. Use `popup()` when you want a short event message such as "A pressed" or "Door unlocked".
+- `pressed()` is best for one-time actions such as menus, jumping, or a popup.
+- `repeat()` is best for held movement because it returns `true` repeatedly while the button stays down.
+
 ## Starter File
 Open `button_tester_starter.ino`.
 
-## Quest Log
+## Objective
 1. Read the TODO labels in the starter before changing code.
 2. Predict the visible result of the next TODO.
 3. Add one small snippet or one small edit.
@@ -36,18 +50,6 @@ if (gb.buttons.pressed(BTN_A)) {
 }
 ```
 
-How `if`, `popup()`, and button feedback work:
-
-- An `if` statement checks whether something is true.
-- If the condition inside `()` is true, the code inside `{}` runs.
-- If the condition is false, that block is skipped.
-- In this example, the popup happens only when A is pressed.
-- `gb.popup(F("A!"), 15)` shows a short temporary message with popup-style feedback, then disappears on its own.
-- `gb.display.print()` and `gb.display.println()` draw normal text as part of the current frame. They do not create popup behavior by themselves.
-- Use `print()` when you want a label that stays on the screen. Use `popup()` when you want a short event message such as "A pressed" or "Door unlocked".
-- `pressed()` is best for one-time actions such as menus, jumping, or a popup.
-- `repeat()` is best for held movement because it keeps firing while the button stays down.
-
 Scope note:
 
 - Mission 03 is about detecting buttons and choosing reactions.
@@ -56,22 +58,22 @@ Scope note:
 
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
-## Core Quest
-1. Test A and B first.
+**Required Steps**
+1. Add A and B first.
 2. Add C.
 3. Add one D-pad direction.
 4. Add the remaining D-pad directions.
 5. Explain which buttons use `pressed()` and why.
 
-## Challenge Quest
+**Optional Extension**
 Make a secret code: UP, UP, A displays a short message.
 
-## Checkpoint
+## Done When
 - A and B show different feedback.
 - All D-pad directions can be detected.
 - C clears or changes the message.
 
-## Bug Hunt
+**If You Get Stuck**
 If you get stuck, check the line above the first error message first. Missing semicolons, missing braces, wrong capitalization, and code outside the right function cause a lot of beginner bugs.
 
 Try this tiny repair challenge before changing more of your own sketch:
@@ -81,7 +83,7 @@ if (gb.buttons.pressed(BTN_A)) {
   gb.popup(F("A!"), 15);
 ```
 
-## Power-Ups
+**Optional Upgrades**
 After the checkpoint works, try one small upgrade inside this same sketch:
 
 - Cosmetic: change text, shape, sprite, layout, or theme.
@@ -89,5 +91,5 @@ After the checkpoint works, try one small upgrade inside this same sketch:
 - Rule: add one message, mode, or button-response twist for now. Save score or lives tracking for Mission 04.
 - Debug: make one tiny bug on purpose, then fix it and explain the fix.
 
-## Reflection
+**Quick Check**
 When should a game use `pressed()` instead of `repeat()`?

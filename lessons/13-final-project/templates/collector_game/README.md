@@ -2,6 +2,8 @@
 
 Starter file: `collector_game_starter.ino`
 
+This starter is intentionally incomplete. You still need to write the movement, collection, and win logic yourself.
+
 Build the smallest version first:
 
 - Move a player with the D-pad.

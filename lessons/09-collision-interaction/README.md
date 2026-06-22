@@ -5,20 +5,32 @@ Make the game react when two rectangles touch.
 
 You are not trying to type a finished game all at once. You are collecting one piece of new gear, testing it, and then using it in the Falling Stars questline.
 
-## Learning Targets
+**How This Contributes To Falling Stars**
+This lesson teaches you how the game can detect when the player catches a star or touches another object.
+
+## Key Terms
 - Use rectangle collision.
 - Change score after contact.
 - Move or reset an item after collection.
 
-## New Gear
+**Terms and Syntax**
 - `gb.collideRectRect`
 - `collectible`
 - `score feedback`
 
+**How It Works**
+- `gb.collideRectRect(...)` asks whether two rectangles are touching or overlapping.
+- A `collectible` is an object the player is supposed to touch or pick up, such as a coin or star.
+- `score feedback` means the player gets a clear sign that the score changed, such as new text, a sound, or the collectible moving away.
+- A rectangle needs four numbers: `x`, `y`, `width`, and `height`.
+- The first four values describe the player rectangle.
+- The second four values describe the coin rectangle.
+- If the two rectangles overlap, the condition becomes true and the code inside the `if` runs.
+
 ## Starter File
 Open `coin_collector_starter.ino`.
 
-## Quest Log
+## Objective
 1. Read the TODO labels in the starter before changing code.
 2. Predict the visible result of the next TODO.
 3. Add one small snippet or one small edit.
@@ -33,13 +45,6 @@ if (gb.collideRectRect(playerX, playerY, playerW, playerH, coinX, coinY, coinW, 
 }
 ```
 
-How rectangle collision works:
-
-- A rectangle needs four numbers: `x`, `y`, `width`, and `height`.
-- The first four values describe the player rectangle.
-- The second four values describe the coin rectangle.
-- If the two rectangles overlap, the condition becomes true and the code inside the `if` runs.
-
 Expected test results for this mission:
 
 - Before contact, the score should stay the same.
@@ -49,23 +54,24 @@ Expected test results for this mission:
 
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
-## Core Quest
-1. Move the player into the coin.
-2. Read the collision condition.
-3. Make score increase once per collection.
-4. Move the coin after collection.
-5. Add a visible or sound response.
+**Required Steps**
+1. Add player movement first.
+2. Move the player into the coin.
+3. Read the collision condition.
+4. Make score increase once per collection.
+5. Move the coin after collection.
+6. Add a visible or sound response.
 
-## Challenge Quest
+**Optional Extension**
 Add a hazard that costs one life.
 
-## Checkpoint
+## Done When
 - Player and coin both appear.
 - Touching the coin increases score.
 - The coin moves or resets after collection.
 - One touch causes one collection result you can describe clearly.
 
-## Bug Hunt
+**If You Get Stuck**
 If you get stuck, check the line above the first error message first. Missing semicolons, missing braces, wrong capitalization, and code outside the right function cause a lot of beginner bugs.
 
 This mission can also fail with logic bugs even when it compiles.
@@ -85,7 +91,7 @@ if (gb.collideRectRect(playerX, playerY, playerW, playerH, coinX, coinY, coinW, 
 }
 ```
 
-## Power-Ups
+**Optional Upgrades**
 After the checkpoint works, try one small upgrade inside this same sketch:
 
 - Cosmetic: change text, shape, sprite, layout, or theme.
@@ -93,8 +99,8 @@ After the checkpoint works, try one small upgrade inside this same sketch:
 - Rule: add one score, life, timer, win, or loss twist.
 - Debug: make one tiny bug on purpose, then fix it and explain the fix.
 
-## Boss Fight
+**Bigger Optional Build**
 Add a second collectible or a hazard, then make collision change score or lives.
 
-## Reflection
+**Quick Check**
 What are the four numbers that describe one rectangle?

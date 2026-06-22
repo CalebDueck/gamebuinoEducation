@@ -36,52 +36,28 @@ void updateTitle() {
 }
 
 void updatePlayer() {
-  if (gb.buttons.repeat(BTN_LEFT, 1)) { playerX--; }
-  if (gb.buttons.repeat(BTN_RIGHT, 1)) { playerX++; }
-  if (gb.buttons.repeat(BTN_UP, 1)) { playerY--; }
-  if (gb.buttons.repeat(BTN_DOWN, 1)) { playerY++; }
-
-  if (playerX < 0) { playerX = 0; }
-  if (playerY < 8) { playerY = 8; }
-  if (playerX + playerSize > LCDWIDTH) { playerX = LCDWIDTH - playerSize; }
-  if (playerY + playerSize > LCDHEIGHT) { playerY = LCDHEIGHT - playerSize; }
+  // TODO: add D-pad movement and screen bounds.
 }
 
 void updateGoal() {
-  if (!keyCollected && gb.collideRectRect(playerX, playerY, playerSize, playerSize, keyX, keyY, 4, 4)) {
-    keyCollected = 1;
-    gb.sound.playOK();
-  }
-  if (keyCollected && gb.collideRectRect(playerX, playerY, playerSize, playerSize, doorX, doorY, 8, 12)) {
-    gameState = STATE_WIN;
-  }
+  // TODO: detect key collection, then detect reaching the door after the key is collected.
 }
 
 void drawHud() {
   gb.display.print(F("Key:"));
-  if (keyCollected) {
-    gb.display.println(F("yes"));
-  } else {
-    gb.display.println(F("no"));
-  }
+  gb.display.println(keyCollected);
 }
 
 void drawGoalObjects() {
-  if (!keyCollected) {
-    gb.display.drawRect(keyX, keyY, 4, 4);
-  }
-  gb.display.drawRect(doorX, doorY, 8, 12);
-  if (keyCollected) {
-    gb.display.drawLine(doorX + 1, doorY + 1, doorX + 6, doorY + 10);
-  }
+  // TODO: draw the key and door in a way the player can read.
 }
 
 void updatePlaying() {
   updatePlayer();
   updateGoal();
   drawHud();
-  gb.display.fillRect(playerX, playerY, playerSize, playerSize);
-  drawGoalObjects();
+
+  // TODO: draw the player and the goal objects.
 }
 
 void updateWin() {

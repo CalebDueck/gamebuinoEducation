@@ -29,32 +29,11 @@ void updateTitle() {
 }
 
 void updatePet() {
-  tick++;
-  if (tick >= 30) {
-    tick = 0;
-    hunger--;
-    happiness--;
-  }
-  if (gb.buttons.pressed(BTN_A) && hunger < 9) {
-    hunger += 2;
-  }
-  if (gb.buttons.pressed(BTN_B) && happiness < 9) {
-    happiness += 2;
-  }
-  if (hunger <= 0 || happiness <= 0) {
-    gameState = STATE_GAME_OVER;
-  }
+  // TODO: change hunger and happiness over time, react to button presses, and trigger game over when needed.
 }
 
 void drawPet() {
-  gb.display.drawCircle(42, 24, 8);
-  gb.display.drawPixel(39, 22);
-  gb.display.drawPixel(45, 22);
-  if (hunger > 3 && happiness > 3) {
-    gb.display.drawLine(39, 28, 45, 28);
-  } else {
-    gb.display.drawLine(39, 30, 45, 30);
-  }
+  // TODO: draw a pet face or body that changes with its mood.
 }
 
 void updateCaring() {

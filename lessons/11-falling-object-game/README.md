@@ -5,23 +5,34 @@ Combine movement, collision, randomness, score, lives, and game states into Fall
 
 You are not trying to type a finished game all at once. You are collecting one piece of new gear, testing it, and then using it in the Falling Stars questline.
 
-## Learning Targets
+**How This Contributes To Falling Stars**
+This lesson is where the earlier pieces combine into the full game: title, movement, falling star, score, lives, and game over.
+
+## Key Terms
 - Update one game state at a time.
 - Make a falling object reset.
 - Use collision for scoring.
 - Use lives and game over.
 
-## New Gear
+**Terms and Syntax**
 - `STATE_TITLE`
 - `STATE_PLAYING`
 - `STATE_GAME_OVER`
 - `resetStar()`
 - `updateStar()`
 
+**How It Works**
+- `==` checks whether two values are equal.
+- This is different from `=`, which changes a value.
+- `if (lives == 0)` means "if lives is equal to zero."
+- A game state is a label for the current mode of the game, such as title, playing, or game over.
+- Changing `gameState` tells the program which part of the game should run next.
+- Build and test one state at a time. Get the title screen working before the playing state, and get the playing state working before game over.
+
 ## Starter File
 Open `falling_stars_starter.ino`.
 
-## Quest Log
+## Objective
 1. Read the TODO labels in the starter before changing code.
 2. Predict the visible result of the next TODO.
 3. Add one small snippet or one small edit.
@@ -39,15 +50,6 @@ if (lives == 0) {
 }
 ```
 
-How `==` and game states work:
-
-- `==` checks whether two values are equal.
-- This is different from `=`, which changes a value.
-- `if (lives == 0)` means "if lives is equal to zero."
-- A game state is a label for the current mode of the game, such as title, playing, or game over.
-- Changing `gameState` tells the program which part of the game should run next.
-- Build and test one state at a time. Get the title screen working before the playing state, and get the playing state working before game over.
-
 Expected staged test results:
 
 - Title test: before pressing A, you should still be on the title screen.
@@ -60,7 +62,7 @@ Expected staged test results:
 
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
-## Core Quest
+**Required Steps**
 1. Start at the title state and press A to play.
 2. Complete player left/right movement.
 3. Make the star fall.
@@ -69,10 +71,10 @@ Do not paste a finished sketch from another file. If you use a snippet card, exp
 6. Add catch collision and score.
 7. Switch to game over at 0 lives.
 
-## Challenge Quest
+**Optional Extension**
 Increase star speed every 5 points.
 
-## Checkpoint
+## Done When
 - Player moves left and right.
 - Star falls from the top.
 - Score changes when caught.
@@ -80,7 +82,7 @@ Increase star speed every 5 points.
 - Game over appears at 0 lives.
 - You can describe the expected result of the next state before you test it.
 
-## Reference File
+**Reference File**
 
 This lesson folder also includes `falling_stars_reference.ino`.
 
@@ -94,7 +96,7 @@ Do not open the reference sketch until you have passed these checkpoints:
 
 When you do open the reference, use it for Code Archaeology: find one function, compare it to yours, then close the file and improve your own version.
 
-## Bug Hunt
+**If You Get Stuck**
 If you get stuck, check the line above the first error message first. Missing semicolons, missing braces, wrong capitalization, and code outside the right function cause a lot of beginner bugs.
 
 This mission can also fail with logic bugs even when it compiles.
@@ -116,7 +118,7 @@ if (lives = 0) {
 }
 ```
 
-## Power-Ups
+**Optional Upgrades**
 After the checkpoint works, try one small upgrade inside this same sketch:
 
 - Cosmetic: change text, shape, sprite, layout, or theme.
@@ -124,8 +126,8 @@ After the checkpoint works, try one small upgrade inside this same sketch:
 - Rule: add one score, life, timer, win, or loss twist.
 - Debug: make one tiny bug on purpose, then fix it and explain the fix.
 
-## Boss Fight
+**Bigger Optional Build**
 Add one new rule to Falling Stars, such as faster stars, a bonus catch, or an extra life pickup.
 
-## Reflection
+**Quick Check**
 Which function owns the rule for catching or missing a star?

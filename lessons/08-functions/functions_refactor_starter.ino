@@ -20,14 +20,11 @@ void updatePlayer() {
 void drawPlayer() {
   // CORE QUEST 2: draw the player.
   // Test result: if the square is missing, inspect this function first.
-  gb.display.fillRect(playerX, playerY, 6, 6);
 }
 
 void drawHud() {
   // CORE QUEST 3: draw score or another useful value.
   // Test result: if the HUD text is missing, inspect this function first.
-  gb.display.print(F("Score: "));
-  gb.display.println(score);
 }
 
 void loop() {

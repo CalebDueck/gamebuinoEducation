@@ -19,18 +19,12 @@ void loop() {
   if (gb.update()) {
     // CORE QUEST 1: move left and right.
     // Test result: LEFT and RIGHT should change only playerX.
-    if (gb.buttons.repeat(BTN_LEFT, 1)) {
-      playerX--;
-    }
-    if (gb.buttons.repeat(BTN_RIGHT, 1)) {
-      playerX++;
-    }
 
     // CORE QUEST 2: add bounds using playerW and LCDWIDTH.
     // Test result: the sprite should stop at the left and right screen edges.
 
 
     // CORE QUEST 3: draw your sprite at the player position.
-    gb.display.drawBitmap(playerX, playerY, HERO_EXAMPLE);
+    // Example syntax: gb.display.drawBitmap(playerX, playerY, HERO_EXAMPLE);
   }
 }

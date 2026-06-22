@@ -7,22 +7,33 @@ You are not trying to type a finished game all at once. You are collecting one p
 
 If this is your first programming language, keep `ARDUINO_FUNDAMENTALS.md` open while you work.
 
-## Learning Targets
+**How This Contributes To Falling Stars**
+This lesson makes sure your computer can compile, upload, and talk to the device you will use to build the full game.
+
+## Key Terms
 - Open a sketch in the Arduino IDE.
 - Compile and upload to a Gamebuino Classic.
 - Change one small message and test the result.
 
-## New Gear
+**Terms and Syntax**
 - `sketch`
 - `setup()`
 - `loop()`
 - `compile`
 - `upload`
 
+**How It Works**
+- `setup()` runs once when the Gamebuino starts.
+- `loop()` runs again and again while the Gamebuino is on.
+- Many game actions happen inside `loop()` because input, drawing, and movement need to keep updating.
+- A `sketch` is just an Arduino program file.
+- `compile` checks your code for mistakes.
+- `upload` sends the compiled sketch to the Gamebuino.
+
 ## Starter File
 Open `welcome_badge.ino`.
 
-## Quest Log
+## Objective
 1. Read the `TODO` labels in the starter comments before changing code.
 2. Predict the visible result of the next `TODO`.
 3. Add one small snippet or one small edit.
@@ -38,33 +49,24 @@ Useful snippet card:
 gb.display.println(F("Ready!"));
 ```
 
-How `setup()` and `loop()` work:
-
-- `setup()` runs once when the Gamebuino starts.
-- `loop()` runs again and again while the Gamebuino is on.
-- Many game actions happen inside `loop()` because input, drawing, and movement need to keep updating.
-- A `sketch` is just an Arduino program file.
-- `compile` checks your code for mistakes.
-- `upload` sends the compiled sketch to the Gamebuino.
-
 Do not paste a finished sketch from another file. If you use a snippet card, explain which variable or Gamebuino command it changes.
 
-## Core Quest
+**Required Steps**
 1. Open the welcome badge sketch.
 2. Compile before changing anything.
 3. Upload to the Gamebuino Classic.
 4. Change one short message under a `TODO` comment.
 5. Upload again and press A.
 
-## Challenge Quest
+**Optional Extension**
 Change the badge so it welcomes you, your project name, or your game studio.
 
-## Checkpoint
+## Done When
 - The title screen appears after upload.
 - The changed message appears.
 - Pressing A triggers the popup.
 
-## Bug Hunt
+**If You Get Stuck**
 If you get stuck, check the line above the first error message first. Missing semicolons, missing braces, wrong capitalization, and code outside the right function cause a lot of beginner bugs.
 
 Try this tiny repair challenge before changing more of your own sketch:
@@ -73,7 +75,7 @@ Try this tiny repair challenge before changing more of your own sketch:
 gb.display.println(F("Ready!"))
 ```
 
-## Power-Ups
+**Optional Upgrades**
 After the checkpoint works, try one small upgrade inside this same sketch:
 
 - Cosmetic: change `Welcome`, `Classic Quest`, or `Press A` to your own theme.
@@ -83,5 +85,5 @@ After the checkpoint works, try one small upgrade inside this same sketch:
 
 For Mission 00, "button feel" means what a button does, which button triggers it, or how long the popup feedback lasts. A small example is changing the popup text or changing the `25` popup duration.
 
-## Reflection
+**Quick Check**
 What proved that your computer was talking to the Gamebuino Classic?

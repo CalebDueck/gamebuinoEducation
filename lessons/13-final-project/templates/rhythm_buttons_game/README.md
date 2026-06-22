@@ -2,6 +2,8 @@
 
 Starter file: `rhythm_buttons_game_starter.ino`
 
+This starter is intentionally incomplete. You still need to write the pattern display and input-check logic yourself.
+
 Build the smallest version first:
 
 - Show a short button pattern.

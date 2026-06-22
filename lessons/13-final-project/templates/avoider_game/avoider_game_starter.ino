@@ -23,8 +23,7 @@ int score = 0;
 byte lives = 3;
 
 void resetHazard() {
-  hazardX = random(0, LCDWIDTH - hazardSize);
-  hazardY = 0;
+  // TODO: choose a new hazard position at the top of the screen.
 }
 
 void resetGame() {
@@ -46,26 +45,11 @@ void updateTitle() {
 }
 
 void updatePlayer() {
-  if (gb.buttons.repeat(BTN_LEFT, 1)) { playerX--; }
-  if (gb.buttons.repeat(BTN_RIGHT, 1)) { playerX++; }
-  if (playerX < 0) { playerX = 0; }
-  if (playerX + playerW > LCDWIDTH) { playerX = LCDWIDTH - playerW; }
+  // TODO: add player movement and bounds.
 }
 
 void updateHazard() {
-  hazardY += hazardSpeed;
-  if (gb.collideRectRect(playerX, playerY, playerW, playerH, hazardX, hazardY, hazardSize, hazardSize)) {
-    if (lives > 0) { lives--; }
-    gb.sound.playCancel();
-    resetHazard();
-    if (lives == 0) {
-      gameState = STATE_GAME_OVER;
-    }
-  } else if (hazardY > LCDHEIGHT) {
-    score++;
-    if (score % 5 == 0 && hazardSpeed < 4) { hazardSpeed++; }
-    resetHazard();
-  }
+  // TODO: move the hazard, handle collisions, update score, and trigger game over at 0 lives.
 }
 
 void drawHud() {
@@ -79,8 +63,8 @@ void updatePlaying() {
   updatePlayer();
   updateHazard();
   drawHud();
-  gb.display.fillRect(playerX, playerY, playerW, playerH);
-  gb.display.fillRect(hazardX, hazardY, hazardSize, hazardSize);
+
+  // TODO: draw the player and the hazard.
 }
 
 void updateGameOver() {

@@ -2,6 +2,8 @@
 
 Starter file: `virtual_pet_starter.ino`
 
+This starter is intentionally incomplete. You still need to write the meter updates, button actions, and lose-condition logic yourself.
+
 Plan a tiny pet with one need, one button action, and one visible mood or progress value.
 
 Required ideas:

@@ -15,9 +15,7 @@ byte score = 0;
 int timer = 30;
 
 void chooseRound() {
-  byte choices[3] = {BTN_A, BTN_B, BTN_C};
-  targetButton = choices[random(0, 3)];
-  timer = 30;
+  // TODO: choose a target button and reset the timer for a new round.
 }
 
 void resetGame() {
@@ -37,42 +35,11 @@ void updateTitle() {
 }
 
 void drawTarget() {
-  gb.display.print(F("Press: "));
-  if (targetButton == BTN_A) {
-    gb.display.println(F("A"));
-  } else if (targetButton == BTN_B) {
-    gb.display.println(F("B"));
-  } else {
-    gb.display.println(F("C"));
-  }
+  // TODO: show the current target button on screen.
 }
 
 void updateRound() {
-  byte pressed = 0;
-  if (gb.buttons.pressed(BTN_A)) { pressed = BTN_A; }
-  if (gb.buttons.pressed(BTN_B)) { pressed = BTN_B; }
-  if (gb.buttons.pressed(BTN_C)) { pressed = BTN_C; }
-
-  if (pressed != 0) {
-    if (pressed == targetButton) {
-      score++;
-      roundsLeft--;
-      gb.sound.playOK();
-      if (roundsLeft == 0) {
-        gameState = STATE_GAME_OVER;
-      } else {
-        chooseRound();
-      }
-    } else {
-      gb.sound.playCancel();
-      gameState = STATE_GAME_OVER;
-    }
-  } else {
-    timer--;
-    if (timer <= 0) {
-      gameState = STATE_GAME_OVER;
-    }
-  }
+  // TODO: read button input, compare it with targetButton, update score, and handle timer loss.
 }
 
 void updatePlaying() {

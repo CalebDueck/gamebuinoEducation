@@ -34,48 +34,15 @@ void updateTitle() {
 }
 
 void drawButtonName(byte buttonValue) {
-  if (buttonValue == BTN_A) {
-    gb.display.println(F("A"));
-  } else if (buttonValue == BTN_B) {
-    gb.display.println(F("B"));
-  } else {
-    gb.display.println(F("C"));
-  }
+  // TODO: display the current button name or symbol.
 }
 
 void updateShow() {
-  gb.display.print(F("Step "));
-  gb.display.println(showIndex + 1);
-  drawButtonName(pattern[showIndex]);
-  showTimer--;
-  if (showTimer <= 0) {
-    showIndex++;
-    showTimer = 20;
-    if (showIndex >= patternLength) {
-      gameState = STATE_INPUT;
-    }
-  }
+  // TODO: show the pattern one step at a time, then switch to input mode.
 }
 
 void updateInput() {
-  byte pressed = 0;
-  gb.display.print(F("Repeat "));
-  gb.display.println(inputIndex + 1);
-  if (gb.buttons.pressed(BTN_A)) { pressed = BTN_A; }
-  if (gb.buttons.pressed(BTN_B)) { pressed = BTN_B; }
-  if (gb.buttons.pressed(BTN_C)) { pressed = BTN_C; }
-  if (pressed != 0) {
-    if (pressed == pattern[inputIndex]) {
-      inputIndex++;
-      gb.sound.playOK();
-      if (inputIndex >= patternLength) {
-        gameState = STATE_WIN;
-      }
-    } else {
-      gb.sound.playCancel();
-      gameState = STATE_GAME_OVER;
-    }
-  }
+  // TODO: read button presses, compare them with pattern[inputIndex], and switch to win or game over.
 }
 
 void updateWin() {

@@ -11,14 +11,11 @@ void setup() {
 void loop() {
   if (gb.update()) {
     // CORE QUEST 1: print your game title.
-    gb.display.println(F("Falling Stars"));
+    // Example syntax: gb.display.println(F("My Game"));
 
     // CORE QUEST 2: print your name or team name.
-    gb.display.println(F("By: ______"));
 
-    // CORE QUEST 3: add a prompt that fits the screen.
-    gb.display.println();
-    gb.display.println(F("Press A"));
+    // CORE QUEST 3: add a blank line and a prompt that fits the screen.
 
     // POWER-UP: use gb.frameCount to blink only the prompt line.
     // Keep the same line count each frame so later text does not slide upward.

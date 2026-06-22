@@ -26,7 +26,7 @@ def main():
             if text.count("```cpp") > 3 or "#include <Gamebuino.h>" in text:
                 print(f"{readme} may contain too much complete code")
                 failed = True
-            for heading in ["Mission Brief", "Learning Targets", "New Gear", "Starter File", "Quest Log", "Core Quest", "Challenge Quest", "Checkpoint", "Bug Hunt", "Power-Ups", "Reflection"]:
+            for heading in ["Mission Brief", "Key Terms", "Starter File", "Objective", "Done When"]:
                 if heading not in text:
                     print(f"{readme} missing heading: {heading}")
                     failed = True

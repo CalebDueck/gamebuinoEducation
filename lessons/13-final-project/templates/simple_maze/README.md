@@ -2,6 +2,8 @@
 
 Starter file: `simple_maze_starter.ino`
 
+This starter is intentionally incomplete. You still need to write the movement, maze, and win-condition logic yourself.
+
 Plan a tiny maze where the player reaches an exit without touching walls.
 
 Required ideas:

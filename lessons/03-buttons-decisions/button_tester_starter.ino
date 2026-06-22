@@ -13,14 +13,11 @@ void loop() {
     // This line is normal screen text, so it is redrawn every frame.
     gb.display.println(F("Press buttons"));
 
-    // CORE QUEST 1: A and B already work. Test them first.
-    // These are popup messages, so they appear briefly when the event happens.
-    if (gb.buttons.pressed(BTN_A)) {
-      gb.popup(F("A pressed"), 15);
-    }
-    if (gb.buttons.pressed(BTN_B)) {
-      gb.popup(F("B pressed"), 15);
-    }
+    // CORE QUEST 1: Add A and B first.
+    // Example syntax:
+    // if (gb.buttons.pressed(BTN_A)) {
+    //   gb.popup(F("A pressed"), 15);
+    // }
 
     // CORE QUEST 2: Add C.
 

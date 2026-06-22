@@ -16,6 +16,24 @@ setup -> screen output -> coordinates -> buttons -> variables -> movement -> spr
 
 The core path is beginner-friendly. Challenge Quests, Power-Ups, Boss Fights, debugging stretch quests, Code Archaeology, Git, and multiplayer stretch advanced gameBuilders without raising the floor for everyone else.
 
+## Falling Stars Debrief
+
+The core path is building toward one known target: `Falling Stars`.
+
+By the end of Mission 11, learners are assembling a game with:
+
+- a title screen
+- a player near the bottom of the screen
+- left/right movement
+- a falling object
+- collision for catches
+- score for success
+- lives for misses
+- random respawn positions
+- a game-over state
+
+Make that target visible early. Learners should know from the first missions that they are checking off parts of one final build, not completing unrelated mini-tasks.
+
 ## Hardware Scope
 
 This repo targets Gamebuino Classic only:

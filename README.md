@@ -14,7 +14,7 @@ Middle school and high school learners, including complete beginners and people 
 
 The course is designed to be independently navigable without becoming an answer key.
 
-- Lessons use staged TODOs, short snippet cards, predictions, checkpoints, debug puzzles, and reflections.
+- Lessons use a small repeated structure: mission brief, key terms, starter file, objective, and done-when checks.
 - Lesson READMEs avoid complete finished sketches.
 - Reference code is separated and locked behind checkpoint guidance.
 - Complete solutions can stay in a private branch or private folder when needed.
@@ -28,6 +28,35 @@ The course is designed to be independently navigable without becoming an answer 
 - a coin collector
 - Falling Stars, a falling-object game
 - a final custom cartridge
+
+## Falling Stars Preview
+
+The main guided project in the course is `Falling Stars`, a small game where:
+
+- a player moves left and right near the bottom of the screen
+- a falling star drops from the top
+- catching the star increases score
+- missing the star costs one life
+- stars respawn in new places
+- the game has a title screen, playing state, and game-over screen
+
+The numbered lessons are building boxes for that one game:
+
+- `00` device setup and upload
+- `01` title text and on-screen messages
+- `02` screen placement with coordinates
+- `03` button input
+- `04` score and lives variables
+- `05` player movement
+- `06` sprite art pipeline
+- `07` sprite-based player
+- `08` update/draw/HUD functions
+- `09` catch collision
+- `10` random respawn
+- `11` full Falling Stars build
+- `12` polish and player-facing README
+
+If a lesson feels small on its own, treat it as checking off one part of the final game.
 
 ## Start Here
 

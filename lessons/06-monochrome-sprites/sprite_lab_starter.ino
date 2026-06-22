@@ -18,6 +18,6 @@ void loop() {
 
     // CORE QUEST 1: validate and convert assets/sprites/hero_example.sprite.txt.
     // CORE QUEST 2: draw the generated bitmap here.
-    gb.display.drawBitmap(38, 24, HERO_EXAMPLE);
+    // Example syntax: gb.display.drawBitmap(38, 24, HERO_EXAMPLE);
   }
 }

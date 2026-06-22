@@ -19,8 +19,7 @@ int score = 0;
 const int targetScore = 5;
 
 void placeItem() {
-  itemX = random(0, LCDWIDTH - playerSize);
-  itemY = random(8, LCDHEIGHT - playerSize);
+  // TODO: move the item to a new spot after it is collected.
 }
 
 void resetGame() {
@@ -32,7 +31,7 @@ void resetGame() {
 
 void updateTitle() {
   gb.display.println(F("Collector"));
-  gb.display.println(F("Grab 5 items"));
+  gb.display.println(F("Build your version"));
   gb.display.println(F("A: start"));
   if (gb.buttons.pressed(BTN_A)) {
     resetGame();
@@ -41,26 +40,11 @@ void updateTitle() {
 }
 
 void updatePlayer() {
-  if (gb.buttons.repeat(BTN_LEFT, 1)) { playerX--; }
-  if (gb.buttons.repeat(BTN_RIGHT, 1)) { playerX++; }
-  if (gb.buttons.repeat(BTN_UP, 1)) { playerY--; }
-  if (gb.buttons.repeat(BTN_DOWN, 1)) { playerY++; }
-
-  if (playerX < 0) { playerX = 0; }
-  if (playerY < 8) { playerY = 8; }
-  if (playerX + playerSize > LCDWIDTH) { playerX = LCDWIDTH - playerSize; }
-  if (playerY + playerSize > LCDHEIGHT) { playerY = LCDHEIGHT - playerSize; }
+  // TODO: add D-pad movement and screen bounds.
 }
 
 void updateCollect() {
-  if (gb.collideRectRect(playerX, playerY, playerSize, playerSize, itemX, itemY, playerSize, playerSize)) {
-    score++;
-    gb.sound.playOK();
-    placeItem();
-    if (score >= targetScore) {
-      gameState = STATE_WIN;
-    }
-  }
+  // TODO: detect collection, increase score, move the item, and switch to win at targetScore.
 }
 
 void drawHud() {
@@ -74,8 +58,8 @@ void updatePlaying() {
   updatePlayer();
   updateCollect();
   drawHud();
-  gb.display.fillRect(playerX, playerY, playerSize, playerSize);
-  gb.display.drawRect(itemX, itemY, playerSize, playerSize);
+
+  // TODO: draw the player and the collectible item.
 }
 
 void updateWin() {

@@ -22,18 +22,7 @@ void resetGame() {
 }
 
 byte hitsWall(int nextX, int nextY) {
-  if (nextX < 0 || nextY < 8 || nextX + playerSize > LCDWIDTH || nextY + playerSize > LCDHEIGHT) {
-    return 1;
-  }
-  if (nextX + playerSize > 20 && nextX < 24 && nextY < 38) {
-    return 1;
-  }
-  if (nextY + playerSize > 24 && nextY < 28 && nextX > 20 && nextX < 64) {
-    return 1;
-  }
-  if (nextX + playerSize > 60 && nextX < 64 && nextY > 24) {
-    return 1;
-  }
+  // TODO: return 1 when the next position would hit a wall or leave the screen.
   return 0;
 }
 
@@ -48,35 +37,18 @@ void updateTitle() {
 }
 
 void updatePlayer() {
-  int nextX = playerX;
-  int nextY = playerY;
-  if (gb.buttons.repeat(BTN_LEFT, 1)) { nextX--; }
-  if (gb.buttons.repeat(BTN_RIGHT, 1)) { nextX++; }
-  if (gb.buttons.repeat(BTN_UP, 1)) { nextY--; }
-  if (gb.buttons.repeat(BTN_DOWN, 1)) { nextY++; }
-  if (!hitsWall(nextX, nextY)) {
-    playerX = nextX;
-    playerY = nextY;
-  }
+  // TODO: read D-pad input, test the next position with hitsWall(), and move only if safe.
 }
 
 void drawMaze() {
-  gb.display.drawRect(exitX, exitY, 6, 6);
-  gb.display.drawLine(20, 8, 20, 38);
-  gb.display.drawLine(24, 8, 24, 38);
-  gb.display.drawLine(20, 24, 64, 24);
-  gb.display.drawLine(20, 28, 64, 28);
-  gb.display.drawLine(60, 24, 60, 48);
-  gb.display.drawLine(64, 24, 64, 48);
+  // TODO: draw the exit and the maze walls.
 }
 
 void updatePlaying() {
   updatePlayer();
   drawMaze();
-  gb.display.fillRect(playerX, playerY, playerSize, playerSize);
-  if (gb.collideRectRect(playerX, playerY, playerSize, playerSize, exitX, exitY, 6, 6)) {
-    gameState = STATE_WIN;
-  }
+
+  // TODO: draw the player and switch to win when the player reaches the exit.
 }
 
 void updateWin() {

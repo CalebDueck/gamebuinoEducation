@@ -15,29 +15,19 @@ void setup() {
 
 void loop() {
   if (gb.update()) {
-    // CORE QUEST 1: LEFT and RIGHT already work. Test them first.
-    if (gb.buttons.repeat(BTN_LEFT, 1)) {
-      playerX = playerX - 1;
-    }
-    if (gb.buttons.repeat(BTN_RIGHT, 1)) {
-      playerX = playerX + 1;
-    }
+    // CORE QUEST 1: Add LEFT movement.
 
-    // CORE QUEST 2: Add UP movement. Which variable should change?
+    // CORE QUEST 2: Add RIGHT movement.
+
+    // CORE QUEST 3: Add UP movement. Which variable should change?
 
 
-    // CORE QUEST 3: Add DOWN movement.
+    // CORE QUEST 4: Add DOWN movement.
 
 
-    // CORE QUEST 4: Keep the square inside the left and right edges.
-    if (playerX < 0) {
-      playerX = 0;
-    }
-    if (playerX + playerW > LCDWIDTH) {
-      playerX = LCDWIDTH - playerW;
-    }
+    // CORE QUEST 5: Keep the square inside the left and right edges.
 
-    // CORE QUEST 5: Add matching bounds for top and bottom.
+    // CORE QUEST 6: Add matching bounds for top and bottom.
 
 
     gb.display.fillRect(playerX, playerY, playerW, playerH);
