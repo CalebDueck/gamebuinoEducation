@@ -63,13 +63,16 @@ If a lesson feels small on its own, treat it as checking off one part of the fin
 Follow this path:
 
 1. Download Arduino IDE: https://www.arduino.cc/en/software/
-2. Open Arduino IDE.
-3. Click the books icon in the IDE and search for `Gamebuino` to install the Gamebuino Classic library.
-4. If you have never programmed before, skim `ARDUINO_FUNDAMENTALS.md`.
-5. Read `SETUP_GAMEBUINO_CLASSIC.md` and get one device working.
-6. Start Lesson 00 in `lessons/00-setup/README.md`.
-7. Open `lessons/00-setup/welcome_badge.ino` and complete the Lesson 00 mission.
-8. After that, move through the numbered lesson folders in order: `01`, `02`, `03`, and so on.
+2. If you are using an Apple Silicon Mac and Arduino IDE does not open, run `softwareupdate --install-rosetta --agree-to-license` in Terminal first.
+3. Open Arduino IDE.
+4. Click the books icon in the IDE and search for `Gamebuino` to install the Gamebuino Classic library.
+5. If you have never programmed before, skim `ARDUINO_FUNDAMENTALS.md`.
+6. Read `SETUP_GAMEBUINO_CLASSIC.md` and get one device working.
+7. Start Lesson 00 in `lessons/00-setup/README.md`.
+8. Open `lessons/00-setup/welcome_badge.ino` and complete the Lesson 00 mission.
+9. After that, move through the numbered lesson folders in order: `01`, `02`, `03`, and so on.
+
+Handle the Gamebuino Classic micro USB connector gently. It is fragile and can be damaged by forcing the cable, bending it sideways, or wiggling it during connection.
 
 Inside each lesson:
 

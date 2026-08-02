@@ -17,6 +17,7 @@ This setup guide is the device-specific reference for first-run setup and troubl
 - Test one upload per computer type.
 - Prepare backup starter sketches.
 - Prepare spare USB cables.
+- Tell students that the micro USB connector is fragile and should be handled gently.
 
 ## Hardware Target
 
@@ -25,17 +26,18 @@ This repo is for Gamebuino Classic only. Confirm that you are using the Classic 
 ## Setup Steps
 
 1. Download Arduino IDE from https://www.arduino.cc/en/software/
-2. Open Arduino IDE.
-3. Open Library Manager from the books icon or from `Tools` -> `Manage Libraries`.
-4. Search for `Gamebuino` and install the Gamebuino Classic library.
-5. If Library Manager search does not work, restart Arduino IDE once and try again.
-6. If search still fails, scroll the library list manually until you find `Gamebuino`.
-7. Open `lessons/00-setup/welcome_badge.ino`.
-8. Select the board. For most classroom setups, Gamebuino Classic uses an `Arduino Uno`-compatible target unless your local verified notes say otherwise.
-9. Select the port for the connected device.
-10. Compile.
-11. Upload.
-12. Run the sketch on the Gamebuino Classic.
+2. If you are using an Apple Silicon Mac and Arduino IDE does not open, run `softwareupdate --install-rosetta --agree-to-license` in Terminal first.
+3. Open Arduino IDE.
+4. Open Library Manager from the books icon or from `Tools` -> `Manage Libraries`.
+5. Search for `Gamebuino` and install the Gamebuino Classic library.
+6. If Library Manager search does not work, restart Arduino IDE once and try again.
+7. If search still fails, scroll the library list manually until you find `Gamebuino`.
+8. Open `lessons/00-setup/welcome_badge.ino`.
+9. Select the board. For most classroom setups, Gamebuino Classic uses an `Arduino Uno`-compatible target unless your local verified notes say otherwise.
+10. Select the port for the connected device.
+11. Compile.
+12. Upload.
+13. Run the sketch on the Gamebuino Classic.
 
 ## Board And Port Checklist
 
@@ -44,6 +46,7 @@ This repo is for Gamebuino Classic only. Confirm that you are using the Classic 
 - Port label: if your diagnostics or port menu shows `USB` in the device name, prefer that entry over unrelated serial ports.
 - Wrong port warning: if upload fails immediately, you may have selected a different device such as another board, adapter, or built-in serial port.
 - Cable check: some USB cables only provide power. If the board powers on but no new port appears, try another cable.
+- Connector care: the micro USB connector is fragile. Insert the cable straight, do not force it, and avoid sideways pressure while the cable is plugged in.
 
 ## First-Time Diagnostic Clues
 
@@ -63,4 +66,5 @@ Do not substitute Gamebuino META setup steps or Python instructions.
 - Blank screen: draw inside `if (gb.update())` and check battery and contrast.
 - Compile error: read the first error and check nearby braces or semicolons.
 - Upload failure: confirm `Arduino Uno` board selection, the USB-labeled port when available, cable, and your verified settings.
+- macOS launch issue on Apple Silicon: if Arduino IDE does not open, run `softwareupdate --install-rosetta --agree-to-license`, then try again.
 - Button repeats too fast: use `pressed()` for events and `repeat()` for held movement.
